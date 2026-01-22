@@ -1,0 +1,6 @@
+query,doc_url,relevant,language,annotator,timestamp,notes
+election,https://en.prothomalo.com/bangladesh/om5xh4d9fc,yes,en,real_test,2026-01-22T21:56:39.583431,"Confidence: 1.000, Title: ‘One-sided, engineered’ elections planned at the ‘..."
+election,https://en.prothomalo.com/bangladesh/euwgnb9x3q,yes,en,real_test,2026-01-22T21:56:39.584050,"Confidence: 0.890, Title: 2018 elections: Ballots stuffed between 10pm and 3..."
+election,https://www.dhakatribune.com/bangladesh/election/397894/election-system-heavily-damaged-as-commission,yes,en,real_test,2026-01-22T21:56:39.584176,"Confidence: 0.887, Title: Election system heavily damaged as commission work..."
+election,https://en.prothomalo.com/bangladesh/1aa7vf63im,yes,en,real_test,2026-01-22T21:56:39.584283,"Confidence: 0.830, Title: Concerns over election enthusiasm and law and orde..."
+election,https://dailyasianage.com/news/347047/cyber-risks-hidden-in-the-shadow-of-ballots,yes,en,real_test,2026-01-22T21:56:39.584370,"Confidence: 0.781, Title: Cyber Risks Hidden in The Shadow of Ballots..."

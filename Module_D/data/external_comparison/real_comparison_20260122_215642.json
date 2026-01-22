@@ -1,0 +1,82 @@
+{
+  "query": "election",
+  "timestamp": "2026-01-22T21:56:39.584488",
+  "clir_results": [
+    {
+      "doc_id": 5574,
+      "score": 0.8302224921831686,
+      "title": "‘One-sided, engineered’ elections planned at the ‘highest level’",
+      "url": "https://en.prothomalo.com/bangladesh/om5xh4d9fc",
+      "language": "en",
+      "model": "hybrid",
+      "confidence_score": 1.0,
+      "rank": 1
+    },
+    {
+      "doc_id": 5499,
+      "score": 0.7928115765256343,
+      "title": "2018 elections: Ballots stuffed between 10pm and 3am",
+      "url": "https://en.prothomalo.com/bangladesh/euwgnb9x3q",
+      "language": "en",
+      "model": "hybrid",
+      "confidence_score": 0.8900012583583651,
+      "rank": 2
+    },
+    {
+      "doc_id": 4940,
+      "score": 0.7919082139841243,
+      "title": "Election system heavily damaged as commission works to restore it, says Sanaullah",
+      "url": "https://www.dhakatribune.com/bangladesh/election/397894/election-system-heavily-damaged-as-commission",
+      "language": "en",
+      "model": "hybrid",
+      "confidence_score": 0.887345115329899,
+      "rank": 3
+    },
+    {
+      "doc_id": 5553,
+      "score": 0.7723650563499833,
+      "title": "Concerns over election enthusiasm and law and order",
+      "url": "https://en.prothomalo.com/bangladesh/1aa7vf63im",
+      "language": "en",
+      "model": "hybrid",
+      "confidence_score": 0.8298826686167917,
+      "rank": 4
+    },
+    {
+      "doc_id": 4739,
+      "score": 0.7557750436050708,
+      "title": "Cyber Risks Hidden in The Shadow of Ballots",
+      "url": "https://dailyasianage.com/news/347047/cyber-risks-hidden-in-the-shadow-of-ballots",
+      "language": "en",
+      "model": "hybrid",
+      "confidence_score": 0.781103308537388,
+      "rank": 5
+    }
+  ],
+  "external_results": {
+    "duckduckgo": [],
+    "ai_search": []
+  },
+  "overlap_analysis": {
+    "duckduckgo": {
+      "total_clir": 5,
+      "total_external": 0,
+      "overlap_count": 0,
+      "overlap_percentage": 0.0,
+      "overlapping_urls": []
+    },
+    "ai_search": {
+      "total_clir": 5,
+      "total_external": 0,
+      "overlap_count": 0,
+      "overlap_percentage": 0.0,
+      "overlapping_urls": []
+    }
+  },
+  "summary": {
+    "total_external_engines": 0,
+    "average_overlap_percentage": 0.0,
+    "clir_unique_results": 5,
+    "has_external_data": false
+  }
+}

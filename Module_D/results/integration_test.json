@@ -1,0 +1,1851 @@
+{
+  "timestamp": "2026-01-22T22:05:39.983044",
+  "queries": [
+    "election",
+    "শিক্ষা",
+    "Bangladesh"
+  ],
+  "k": 10,
+  "models": [
+    "lexical",
+    "semantic",
+    "fuzzy",
+    "hybrid"
+  ],
+  "individual_results": [
+    {
+      "query": "election",
+      "timestamp": "2026-01-22T22:05:39.983057",
+      "k": 10,
+      "models": {
+        "lexical": {
+          "query": "election",
+          "model": "lexical",
+          "results": [
+            {
+              "doc_id": 5821,
+              "score": 12.99764945564533,
+              "title": "70pc of people want to vote for enP",
+              "url": "https://en.prothomalo.com/bangladesh/politics/vw407hqzn0",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 1.0,
+              "rank": 1
+            },
+            {
+              "doc_id": 4028,
+              "score": 12.744206402364398,
+              "title": "Over 2.23 lakh expatriates register to vote in national election",
+              "url": "https://en.bd-pratidin.com/national/2025/12/07/52260",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.8216092096189229,
+              "rank": 2
+            },
+            {
+              "doc_id": 5725,
+              "score": 12.69211350235414,
+              "title": "JnUCSU election: Chhatra Shibir-backed candidates win 16 posts including VP, GS",
+              "url": "https://en.prothomalo.com/bangladesh/politics/144b1i1l70",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.7849426153454883,
+              "rank": 3
+            },
+            {
+              "doc_id": 4397,
+              "score": 12.54743347422654,
+              "title": "CA backs 'Yes' vote, calls it key to 'New BD'",
+              "url": "https://dailyasianage.com/news/347205/ca-backs-yes-vote-calls-it-key-to-new-bd",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.6831067818676226,
+              "rank": 4
+            },
+            {
+              "doc_id": 3271,
+              "score": 12.450792804491321,
+              "title": "Contact call centre to reset postal vote app password: EC",
+              "url": "https://www.newagebd.net/post/country/288420/contact-call-centre-to-reset-postal-vote-app-password-ec",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.6150843790680767,
+              "rank": 5
+            },
+            {
+              "doc_id": 5661,
+              "score": 12.359402773770052,
+              "title": "Silent race to court Awami League votes",
+              "url": "https://en.prothomalo.com/bangladesh/politics/sym9cutt2x",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.5507577399976155,
+              "rank": 6
+            },
+            {
+              "doc_id": 5756,
+              "score": 12.345498921514668,
+              "title": "Riazul leads for VP, Alim for GS in results from 6 centres",
+              "url": "https://en.prothomalo.com/bangladesh/politics/5yd2pk2vre",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.5409712449208289,
+              "rank": 7
+            },
+            {
+              "doc_id": 5750,
+              "score": 12.30534307990613,
+              "title": "Rakib leads for VP, Alim for GS in results from 13 centres",
+              "url": "https://en.prothomalo.com/bangladesh/politics/o64k71lqck",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.5127067798655408,
+              "rank": 8
+            },
+            {
+              "doc_id": 3761,
+              "score": 12.288740329597086,
+              "title": "I’ll vote from Aam Jantar Dal: Hero Alam",
+              "url": "https://en.bd-pratidin.com/national/2025/12/28/53656",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.5010206132423547,
+              "rank": 9
+            },
+            {
+              "doc_id": 4858,
+              "score": 12.23928672474853,
+              "title": "Miller: EU preparing large observer mission for Bangladesh election",
+              "url": "https://www.dhakatribune.com/bangladesh/election/397812/miller-eu-preparing-large-observer-mission-for",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.4662117378680962,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 40.740966796875,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.04072737693786621,
+            "ranking_time": 1.1682510375976562e-05
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        },
+        "semantic": {
+          "query": "election",
+          "model": "semantic",
+          "results": [
+            {
+              "doc_id": 5574,
+              "score": 0.6724259853363037,
+              "title": "‘One-sided, engineered’ elections planned at the ‘highest level’",
+              "url": "https://en.prothomalo.com/bangladesh/om5xh4d9fc",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6724259853363037,
+              "rank": 1
+            },
+            {
+              "doc_id": 5446,
+              "score": 0.6357343792915344,
+              "title": "Elections and politics: Split in Jamaat-led alliance and new electoral calculation",
+              "url": "https://en.prothomalo.com/opinion/op-ed/utxpacglt0",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6357343792915344,
+              "rank": 2
+            },
+            {
+              "doc_id": 5648,
+              "score": 0.6162291169166565,
+              "title": "Deepfake and cheapfake fears in elections, 10 tactics used more",
+              "url": "https://en.prothomalo.com/bangladesh/politics/oxsmab654y",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6162291169166565,
+              "rank": 3
+            },
+            {
+              "doc_id": 5831,
+              "score": 0.6049079895019531,
+              "title": "Election: Why prices of candidates’ houses, cars, and gold jewelry so low?",
+              "url": "https://en.prothomalo.com/bangladesh/politics/ced9q6w63o",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6049079895019531,
+              "rank": 4
+            },
+            {
+              "doc_id": 5499,
+              "score": 0.6025992035865784,
+              "title": "2018 elections: Ballots stuffed between 10pm and 3am",
+              "url": "https://en.prothomalo.com/bangladesh/euwgnb9x3q",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6025992035865784,
+              "rank": 5
+            },
+            {
+              "doc_id": 4940,
+              "score": 0.5913631319999695,
+              "title": "Election system heavily damaged as commission works to restore it, says Sanaullah",
+              "url": "https://www.dhakatribune.com/bangladesh/election/397894/election-system-heavily-damaged-as-commission",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.5913631319999695,
+              "rank": 6
+            },
+            {
+              "doc_id": 5553,
+              "score": 0.5871423482894897,
+              "title": "Concerns over election enthusiasm and law and order",
+              "url": "https://en.prothomalo.com/bangladesh/1aa7vf63im",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.5871423482894897,
+              "rank": 7
+            },
+            {
+              "doc_id": 5440,
+              "score": 0.584356427192688,
+              "title": "Islamist votes divided into three boxes",
+              "url": "https://en.prothomalo.com/bangladesh/politics/p7jj22csm2",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.584356427192688,
+              "rank": 8
+            },
+            {
+              "doc_id": 3590,
+              "score": 0.5790629982948303,
+              "title": "Field set for nat’l polls",
+              "url": "https://en.bd-pratidin.com/special/2025/12/30/53735",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.5790629982948303,
+              "rank": 9
+            },
+            {
+              "doc_id": 5668,
+              "score": 0.5766176581382751,
+              "title": "Shootings, explosions, illegal arms heighten election fears",
+              "url": "https://en.prothomalo.com/bangladesh/politics/7giks4vzq8",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.5766176581382751,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 6.154775619506836,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.00614619255065918,
+            "ranking_time": 7.152557373046875e-06
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        },
+        "fuzzy": {
+          "query": "election",
+          "model": "fuzzy",
+          "results": [
+            {
+              "doc_id": 910,
+              "score": 0.6666666666666667,
+              "title": "নির্বাচনি প্রচার",
+              "url": "https://www.bd-pratidin.com/city/2025/12/02/1186548",
+              "language": "bn",
+              "model": "fuzzy",
+              "confidence_score": 0.6666666666666667,
+              "rank": 1
+            },
+            {
+              "doc_id": 667,
+              "score": 0.48484848484848486,
+              "title": "ঐতিহাসিক জকসু নির্বাচন আজ",
+              "url": "https://www.bd-pratidin.com/last-page/2025/12/30/1198054",
+              "language": "bn",
+              "model": "fuzzy",
+              "confidence_score": 0.48484848484848486,
+              "rank": 2
+            },
+            {
+              "doc_id": 5437,
+              "score": 0.4516129032258065,
+              "title": "Media convention begins",
+              "url": "https://en.prothomalo.com/bangladesh/l4vrssiwf8",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.4516129032258065,
+              "rank": 3
+            },
+            {
+              "doc_id": 59,
+              "score": 0.4444444444444444,
+              "title": "নির্বাচনী প্রচারের প্রস্তুতি",
+              "url": "https://www.prothomalo.com/photo/bangladesh/mnbjosfxcv",
+              "language": "bn",
+              "model": "fuzzy",
+              "confidence_score": 0.4444444444444444,
+              "rank": 4
+            },
+            {
+              "doc_id": 5362,
+              "score": 0.4117647058823529,
+              "title": "ICMAB elects new president",
+              "url": "https://en.prothomalo.com/business/jyv8famr7p",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.4117647058823529,
+              "rank": 5
+            },
+            {
+              "doc_id": 638,
+              "score": 0.41025641025641024,
+              "title": "নির্বাচনি তোড়জোড় জাপার দুই অংশে",
+              "url": "https://www.bd-pratidin.com/first-page/2025/12/30/1198025",
+              "language": "bn",
+              "model": "fuzzy",
+              "confidence_score": 0.41025641025641024,
+              "rank": 6
+            },
+            {
+              "doc_id": 1647,
+              "score": 0.41025641025641024,
+              "title": "জাকসু নির্বাচনের তফসিল ঘোষণা আজ",
+              "url": "https://www.banglatribune.com/my-campus/896407/%E0%A6%9C%E0%A6%BE%E0%A6%95%E0%A6%B8%E0%A7%81-%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A6%A8%E0%A7%87%E0%A6%B0-%E0%A6%A4%E0%A6%AB%E0%A6%B8%E0%A6%BF%E0%A6%B2-%E0%A6%98%E0%A7%8B%E0%A6%B7%E0%A6%A3%E0%A6%BE-%E0%A6%86%E0%A6%9C",
+              "language": "bn",
+              "model": "fuzzy",
+              "confidence_score": 0.41025641025641024,
+              "rank": 7
+            },
+            {
+              "doc_id": 3076,
+              "score": 0.4,
+              "title": "3 electrocuted in Gopalganj",
+              "url": "https://www.newagebd.net/post/country/288619/3-electrocuted-in-gopalganj",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.4,
+              "rank": 8
+            },
+            {
+              "doc_id": 4238,
+              "score": 0.4,
+              "title": "Changes in education system",
+              "url": "https://dailyasianage.com/news/229617/changes-in-education-system",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.4,
+              "rank": 9
+            },
+            {
+              "doc_id": 709,
+              "score": 0.3902439024390244,
+              "title": "তারেক রহমান ও ন্যায্যতার নির্বাচন",
+              "url": "https://www.bd-pratidin.com/editorial/2025/12/30/1198096",
+              "language": "bn",
+              "model": "fuzzy",
+              "confidence_score": 0.3902439024390244,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 76.48873329162598,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.0764777660369873,
+            "ranking_time": 8.106231689453125e-06
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        },
+        "hybrid": {
+          "query": "election",
+          "model": "hybrid",
+          "results": [
+            {
+              "doc_id": 4028,
+              "score": 0.7524655649091327,
+              "title": "Over 2.23 lakh expatriates register to vote in national election",
+              "url": "https://en.bd-pratidin.com/national/2025/12/07/52260",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 1.0,
+              "rank": 1
+            },
+            {
+              "doc_id": 5725,
+              "score": 0.7453019236207366,
+              "title": "JnUCSU election: Chhatra Shibir-backed candidates win 16 posts including VP, GS",
+              "url": "https://en.prothomalo.com/bangladesh/politics/144b1i1l70",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.9755099029920273,
+              "rank": 2
+            },
+            {
+              "doc_id": 5499,
+              "score": 0.7440081989479411,
+              "title": "2018 elections: Ballots stuffed between 10pm and 3am",
+              "url": "https://en.prothomalo.com/bangladesh/euwgnb9x3q",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.9710870904218768,
+              "rank": 3
+            },
+            {
+              "doc_id": 4091,
+              "score": 0.725997508100557,
+              "title": "1,93,874 expatriates register for national election",
+              "url": "https://en.bd-pratidin.com/national/2025/12/06/52191",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.9095145537361664,
+              "rank": 4
+            },
+            {
+              "doc_id": 5790,
+              "score": 0.7182864897123791,
+              "title": "Jatiya Sangsad elections: 1.5 million voters opt for postal ballots",
+              "url": "https://en.prothomalo.com/bangladesh/xea5msxotp",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.8831531572404164,
+              "rank": 5
+            },
+            {
+              "doc_id": 3934,
+              "score": 0.7027873000663895,
+              "title": "Vote calculations are changing",
+              "url": "https://en.bd-pratidin.com/special/2025/12/08/52293",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.830166604355629,
+              "rank": 6
+            },
+            {
+              "doc_id": 4435,
+              "score": 0.698935866691874,
+              "title": "EC to brief  representatives of political  parties on postal voting today",
+              "url": "https://dailyasianage.com/news/347183/ec-to-brief--representatives-of-political--parties-on-postal-voting-today",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.8169998399736084,
+              "rank": 7
+            },
+            {
+              "doc_id": 3829,
+              "score": 0.6954123611621095,
+              "title": "Ivory Coast president eyes parliamentary majority",
+              "url": "https://en.bd-pratidin.com/international/2025/12/27/53615",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.8049541513694292,
+              "rank": 8
+            },
+            {
+              "doc_id": 5796,
+              "score": 0.6752214771933047,
+              "title": "JnUCSU election to be held today after 21 years",
+              "url": "https://en.prothomalo.com/bangladesh/politics/g00v20lbt9",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.735928262555913,
+              "rank": 9
+            },
+            {
+              "doc_id": 5821,
+              "score": 0.5,
+              "title": "70pc of people want to vote for enP",
+              "url": "https://en.prothomalo.com/bangladesh/politics/vw407hqzn0",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.1369045535805259,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 38.736820220947266,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.03872823715209961,
+            "ranking_time": 7.3909759521484375e-06
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        }
+      },
+      "comparison": {
+        "lexical": {
+          "precision@10": 0.0,
+          "recall@50": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        },
+        "semantic": {
+          "precision@10": 0.4,
+          "recall@50": 0.8,
+          "ndcg@10": 0.7042299872433241,
+          "mrr": 1.0
+        },
+        "fuzzy": {
+          "precision@10": 0.0,
+          "recall@50": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        },
+        "hybrid": {
+          "precision@10": 0.1,
+          "recall@50": 0.2,
+          "ndcg@10": 0.16958010263680806,
+          "mrr": 0.3333333333333333
+        }
+      },
+      "error_analysis": {
+        "query": "election",
+        "timestamp": "2026-01-22T22:05:40.145314",
+        "errors_found": {
+          "translation_failure": [],
+          "named_entity_mismatch": [],
+          "semantic_vs_lexical": [
+            {
+              "query": "election",
+              "type": "semantic_win",
+              "lexical_relevant": 0,
+              "semantic_relevant": 4,
+              "lexical_top3": [
+                "70pc of people want to vote for enP",
+                "Over 2.23 lakh expatriates register to vote in nat",
+                "JnUCSU election: Chhatra Shibir-backed candidates "
+              ],
+              "semantic_top3": [
+                "‘One-sided, engineered’ elections planned at the ‘",
+                "Elections and politics: Split in Jamaat-led allian",
+                "Deepfake and cheapfake fears in elections, 10 tact"
+              ],
+              "analysis": "Semantic model found 4 relevant docs vs 0 for lexical"
+            }
+          ],
+          "cross_script_ambiguity": [],
+          "code_switching": []
+        },
+        "summary": {
+          "total_errors": 1,
+          "errors_by_category": {
+            "translation_failure": 0,
+            "named_entity_mismatch": 0,
+            "semantic_vs_lexical": 1,
+            "cross_script_ambiguity": 0,
+            "code_switching": 0
+          },
+          "has_errors": true
+        }
+      }
+    },
+    {
+      "query": "শিক্ষা",
+      "timestamp": "2026-01-22T22:05:40.145369",
+      "k": 10,
+      "models": {
+        "lexical": {
+          "query": "শিক্ষা",
+          "model": "lexical",
+          "results": [
+            {
+              "doc_id": 1604,
+              "score": 4.481277272793971,
+              "title": "শিক্ষার্থীদের সভা-সমাবেশ ও মিছিলে অংশগ্রহণ বন্ধের নির্দেশ",
+              "url": "https://www.banglatribune.com/educations/896363/%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%B8%E0%A6%AD%E0%A6%BE-%E0%A6%B8%E0%A6%AE%E0%A6%BE%E0%A6%AC%E0%A7%87%E0%A6%B6-%E0%A6%93-%E0%A6%AE%E0%A6%BF%E0%A6%9B%E0%A6%BF%E0%A6%B2%E0%A7%87-%E0%A6%85%E0%A6%82%E0%A6%B6%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%B9%E0%A6%A3-%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A7%E0%A7%87%E0%A6%B0",
+              "language": "bn",
+              "model": "lexical_bm25",
+              "confidence_score": 1.0,
+              "rank": 1
+            },
+            {
+              "doc_id": 1282,
+              "score": 4.44796582480101,
+              "title": "আন্দোলনে ফিরবেন বেসরকারি অনার্স-মাস্টার্স স্তরের শিক্ষকরা",
+              "url": "https://www.banglatribune.com/educations/892553/%E0%A6%86%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A7%8B%E0%A6%B2%E0%A6%A8%E0%A7%87-%E0%A6%AB%E0%A6%BF%E0%A6%B0%E0%A6%AC%E0%A7%87%E0%A6%A8-%E0%A6%AC%E0%A7%87%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF-%E0%A6%85%E0%A6%A8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8-%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8-%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A7%87%E0%A6%B0",
+              "language": "bn",
+              "model": "lexical_bm25",
+              "confidence_score": 0.7890691733103895,
+              "rank": 2
+            },
+            {
+              "doc_id": 58,
+              "score": 4.441671777072958,
+              "title": "ইউএপিতে শিক্ষকের বিদ্যায়তনিক স্বাধীনতা খর্ব করেছে দঙ্গলবাজেরা",
+              "url": "https://www.prothomalo.com/bangladesh/9ri7l73cc6",
+              "language": "bn",
+              "model": "lexical_bm25",
+              "confidence_score": 0.7492147457639721,
+              "rank": 3
+            },
+            {
+              "doc_id": 1193,
+              "score": 4.435158148176415,
+              "title": "সরকারি মাধ্যমিকের শিক্ষকদের কর্মবিরতি স্থগিত",
+              "url": "https://www.bd-pratidin.com/national/2025/12/02/1186838",
+              "language": "bn",
+              "model": "lexical_bm25",
+              "confidence_score": 0.7079699122104257,
+              "rank": 4
+            },
+            {
+              "doc_id": 1029,
+              "score": 4.428108912177077,
+              "title": "পরীক্ষা বন্ধ করায় শাস্তির মুখোমুখি হতে হবে শিক্ষকদের: শিক্ষা উপদেষ্টা",
+              "url": "https://www.bd-pratidin.com/national/2025/12/02/1186671",
+              "language": "bn",
+              "model": "lexical_bm25",
+              "confidence_score": 0.6633335704583455,
+              "rank": 5
+            },
+            {
+              "doc_id": 448,
+              "score": 4.412076849433949,
+              "title": "জাহাঙ্গীরনগরে শ্রেণিকক্ষের সংকট নিরসনের দাবিতে শিক্ষার্থীদের অবস্থান কর্মসূচি",
+              "url": "https://www.prothomalo.com/bangladesh/district/j2sq0dr17h",
+              "language": "bn",
+              "model": "lexical_bm25",
+              "confidence_score": 0.561817231430926,
+              "rank": 6
+            },
+            {
+              "doc_id": 934,
+              "score": 4.402129762099143,
+              "title": "শিক্ষার্থীরাই আমাদের সকল কর্মকাণ্ডের কেন্দ্রবিন্দু : ড. মিজান",
+              "url": "https://www.bd-pratidin.com/campus-online/2025/12/02/1186572",
+              "language": "bn",
+              "model": "lexical_bm25",
+              "confidence_score": 0.49883145683692975,
+              "rank": 7
+            },
+            {
+              "doc_id": 1768,
+              "score": 4.401868281279157,
+              "title": "একদল নারী বিদ্যালয়ে ঢুকে জুতা দিয়ে পেটালেন প্রধান শিক্ষককে",
+              "url": "https://www.banglatribune.com/country/dhaka/896533/%E0%A6%8F%E0%A6%95%E0%A6%A6%E0%A6%B2-%E0%A6%A8%E0%A6%BE%E0%A6%B0%E0%A7%80-%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87-%E0%A6%A2%E0%A7%81%E0%A6%95%E0%A7%87-%E0%A6%9C%E0%A7%81%E0%A6%A4%E0%A6%BE-%E0%A6%A6%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AA%E0%A7%87%E0%A6%9F%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%A8-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A7%E0%A6%BE%E0%A6%A8",
+              "language": "bn",
+              "model": "lexical_bm25",
+              "confidence_score": 0.4971757387926437,
+              "rank": 8
+            },
+            {
+              "doc_id": 65,
+              "score": 4.390935091746888,
+              "title": "শাকসু নির্বাচন: তোপের মুখে বিএনপিপন্থী শিক্ষক, প্রশাসন ভবনের সামনে শিক্ষার্থীদের অবস্থান",
+              "url": "https://www.prothomalo.com/bangladesh/district/rj02dg1rf8",
+              "language": "bn",
+              "model": "lexical_bm25",
+              "confidence_score": 0.4279458840327153,
+              "rank": 9
+            },
+            {
+              "doc_id": 339,
+              "score": 4.389133480962006,
+              "title": "উপাচার্যের আশ্বাসে দুই ঘণ্টা পর শিক্ষার্থীদের অবরোধ প্রত্যাহার",
+              "url": "https://www.prothomalo.com/bangladesh/tf6ixdtxjq",
+              "language": "bn",
+              "model": "lexical_bm25",
+              "confidence_score": 0.4165379364614083,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 35.166263580322266,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.0351557731628418,
+            "ranking_time": 8.344650268554688e-06
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        },
+        "semantic": {
+          "query": "শিক্ষা",
+          "model": "semantic",
+          "results": [
+            {
+              "doc_id": 4281,
+              "score": 0.5775128602981567,
+              "title": "Behind The Study: revolution to co-curricular activities",
+              "url": "https://dailyasianage.com/news/255804/behind-the-study-revolution-to-co-curricular-activities",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.5775128602981567,
+              "rank": 1
+            },
+            {
+              "doc_id": 399,
+              "score": 0.5668915510177612,
+              "title": "এআইইউবিতে আকর্ষণীয় বেতনে শিক্ষক হওয়ার সুযোগ",
+              "url": "https://www.prothomalo.com/chakri/employment/62vw80imtv",
+              "language": "bn",
+              "model": "semantic",
+              "confidence_score": 0.5668915510177612,
+              "rank": 2
+            },
+            {
+              "doc_id": 2840,
+              "score": 0.556962251663208,
+              "title": "'অমর্ত্য সেনের বাড়িতে বিশ্বভারতীর জমি' নিয়ে বিতর্ক",
+              "url": "https://www.dhakapost.com/international/1880",
+              "language": "bn",
+              "model": "semantic",
+              "confidence_score": 0.556962251663208,
+              "rank": 3
+            },
+            {
+              "doc_id": 565,
+              "score": 0.5560981035232544,
+              "title": "জাতীয় বিশ্ববিদ্যালয়ে প্রফেশনাল কোর্সে ভর্তির সুযোগ",
+              "url": "https://www.prothomalo.com/education/admission/cjoubdmt1t",
+              "language": "bn",
+              "model": "semantic",
+              "confidence_score": 0.5560981035232544,
+              "rank": 4
+            },
+            {
+              "doc_id": 3511,
+              "score": 0.5515521764755249,
+              "title": "Shoring up primary education",
+              "url": "https://www.newagebd.net/post/opinion/278745/shoring-up-primary-education",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.5515521764755249,
+              "rank": 5
+            },
+            {
+              "doc_id": 543,
+              "score": 0.547166109085083,
+              "title": "প্রথমবারের মতো নারী ক্রিকেট দল গঠন করে চ্যাম্পিয়ন চট্টগ্রাম বিশ্ববিদ্যালয়",
+              "url": "https://www.prothomalo.com/bangladesh/district/dhvwxj1c9f",
+              "language": "bn",
+              "model": "semantic",
+              "confidence_score": 0.547166109085083,
+              "rank": 6
+            },
+            {
+              "doc_id": 1784,
+              "score": 0.5364834666252136,
+              "title": "নর্থ সাউথে ভর্তি পরীক্ষায় উত্তীর্ণ উপদেষ্টা আসিফ মাহমুদ",
+              "url": "https://www.banglatribune.com/others/896549/%E0%A6%A8%E0%A6%B0%E0%A7%8D%E0%A6%A5-%E0%A6%B8%E0%A6%BE%E0%A6%89%E0%A6%A5%E0%A7%87-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%AA%E0%A6%B0%E0%A7%80%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A7%9F-%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A7%80%E0%A6%B0%E0%A7%8D%E0%A6%A3-%E0%A6%89%E0%A6%AA%E0%A6%A6%E0%A7%87%E0%A6%B7%E0%A7%8D%E0%A6%9F%E0%A6%BE-%E0%A6%86%E0%A6%B8%E0%A6%BF%E0%A6%AB",
+              "language": "bn",
+              "model": "semantic",
+              "confidence_score": 0.5364834666252136,
+              "rank": 7
+            },
+            {
+              "doc_id": 4744,
+              "score": 0.5276024341583252,
+              "title": "Life and nature",
+              "url": "https://dailyasianage.com/news/242124/life-and-nature",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.5276024341583252,
+              "rank": 8
+            },
+            {
+              "doc_id": 23,
+              "score": 0.5196179747581482,
+              "title": "আচরণবিধি কতটা মানা হচ্ছে",
+              "url": "https://www.prothomalo.com/video/bangladesh/1wxi262eue",
+              "language": "bn",
+              "model": "semantic",
+              "confidence_score": 0.5196179747581482,
+              "rank": 9
+            },
+            {
+              "doc_id": 734,
+              "score": 0.5124189853668213,
+              "title": "স্থগিত হলো প্রাথমিকের আরও এক নিয়োগ পরীক্ষা",
+              "url": "https://www.bd-pratidin.com/national/2025/12/30/1198122",
+              "language": "bn",
+              "model": "semantic",
+              "confidence_score": 0.5124189853668213,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 6.227016448974609,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.006218433380126953,
+            "ranking_time": 7.3909759521484375e-06
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        },
+        "fuzzy": {
+          "query": "শিক্ষা",
+          "model": "fuzzy",
+          "results": [
+            {
+              "doc_id": 4238,
+              "score": 0.4444444444444444,
+              "title": "Changes in education system",
+              "url": "https://dailyasianage.com/news/229617/changes-in-education-system",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.4444444444444444,
+              "rank": 1
+            },
+            {
+              "doc_id": 3511,
+              "score": 0.4324324324324324,
+              "title": "Shoring up primary education",
+              "url": "https://www.newagebd.net/post/opinion/278745/shoring-up-primary-education",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.4324324324324324,
+              "rank": 2
+            },
+            {
+              "doc_id": 4796,
+              "score": 0.3783783783783784,
+              "title": "Shikho, Walpad launch EduTab",
+              "url": "https://www.dhakatribune.com/business/397749/shikho-walpad-launch-edutab",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.3783783783783784,
+              "rank": 3
+            },
+            {
+              "doc_id": 5437,
+              "score": 0.375,
+              "title": "Media convention begins",
+              "url": "https://en.prothomalo.com/bangladesh/l4vrssiwf8",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.375,
+              "rank": 4
+            },
+            {
+              "doc_id": 4784,
+              "score": 0.3589743589743589,
+              "title": "Khaleda Zia put on ventilation",
+              "url": "https://www.dhakatribune.com/bangladesh/politics/397737/khaleda-zia-put-on-ventilation",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.3589743589743589,
+              "rank": 5
+            },
+            {
+              "doc_id": 4928,
+              "score": 0.3571428571428571,
+              "title": "Every person counts",
+              "url": "https://www.dhakatribune.com/opinion/op-ed/397882/every-person-counts",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.3571428571428571,
+              "rank": 6
+            },
+            {
+              "doc_id": 4227,
+              "score": 0.3529411764705882,
+              "title": "Destination Beach Wedding",
+              "url": "https://dailyasianage.com/news/333014/destination-beach-wedding",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.3529411764705882,
+              "rank": 7
+            },
+            {
+              "doc_id": 2116,
+              "score": 0.34285714285714286,
+              "title": "নওগাঁয় শিক্ষক সমাবেশ অনুষ্ঠিত",
+              "url": "https://www.newsbangla24.com/news/262265/Teachers-rally-held-in-Naogaon",
+              "language": "bn",
+              "model": "fuzzy",
+              "confidence_score": 0.34285714285714286,
+              "rank": 8
+            },
+            {
+              "doc_id": 3245,
+              "score": 0.33333333333333337,
+              "title": "Living with inflation",
+              "url": "https://www.newagebd.net/post/opinion/288446/living-with-inflation",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.33333333333333337,
+              "rank": 9
+            },
+            {
+              "doc_id": 4687,
+              "score": 0.33333333333333337,
+              "title": "Eid-ul-Azha to be celebrated on July 21",
+              "url": "https://dailyasianage.com/news/266500/eid-ul-azha-to-be-celebrated-on-july-21",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.33333333333333337,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 36.34834289550781,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.036340951919555664,
+            "ranking_time": 5.9604644775390625e-06
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        },
+        "hybrid": {
+          "query": "শিক্ষা",
+          "model": "hybrid",
+          "results": [
+            {
+              "doc_id": 399,
+              "score": 0.7576767632924108,
+              "title": "এআইইউবিতে আকর্ষণীয় বেতনে শিক্ষক হওয়ার সুযোগ",
+              "url": "https://www.prothomalo.com/chakri/employment/62vw80imtv",
+              "language": "bn",
+              "model": "hybrid",
+              "confidence_score": 1.0,
+              "rank": 1
+            },
+            {
+              "doc_id": 543,
+              "score": 0.7538492347828285,
+              "title": "প্রথমবারের মতো নারী ক্রিকেট দল গঠন করে চ্যাম্পিয়ন চট্টগ্রাম বিশ্ববিদ্যালয়",
+              "url": "https://www.prothomalo.com/bangladesh/district/dhvwxj1c9f",
+              "language": "bn",
+              "model": "hybrid",
+              "confidence_score": 0.9859028667066094,
+              "rank": 2
+            },
+            {
+              "doc_id": 1604,
+              "score": 0.7434801459312439,
+              "title": "শিক্ষার্থীদের সভা-সমাবেশ ও মিছিলে অংশগ্রহণ বন্ধের নির্দেশ",
+              "url": "https://www.banglatribune.com/educations/896363/%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%B8%E0%A6%AD%E0%A6%BE-%E0%A6%B8%E0%A6%AE%E0%A6%BE%E0%A6%AC%E0%A7%87%E0%A6%B6-%E0%A6%93-%E0%A6%AE%E0%A6%BF%E0%A6%9B%E0%A6%BF%E0%A6%B2%E0%A7%87-%E0%A6%85%E0%A6%82%E0%A6%B6%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%B9%E0%A6%A3-%E0%A6%AC%E0%A6%A8%E0%A7%8D%E0%A6%A7%E0%A7%87%E0%A6%B0",
+              "language": "bn",
+              "model": "hybrid",
+              "confidence_score": 0.9477125756856947,
+              "rank": 3
+            },
+            {
+              "doc_id": 1768,
+              "score": 0.7399345604700489,
+              "title": "একদল নারী বিদ্যালয়ে ঢুকে জুতা দিয়ে পেটালেন প্রধান শিক্ষককে",
+              "url": "https://www.banglatribune.com/country/dhaka/896533/%E0%A6%8F%E0%A6%95%E0%A6%A6%E0%A6%B2-%E0%A6%A8%E0%A6%BE%E0%A6%B0%E0%A7%80-%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87-%E0%A6%A2%E0%A7%81%E0%A6%95%E0%A7%87-%E0%A6%9C%E0%A7%81%E0%A6%A4%E0%A6%BE-%E0%A6%A6%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AA%E0%A7%87%E0%A6%9F%E0%A6%BE%E0%A6%B2%E0%A7%87%E0%A6%A8-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A7%E0%A6%BE%E0%A6%A8",
+              "language": "bn",
+              "model": "hybrid",
+              "confidence_score": 0.934653864111257,
+              "rank": 4
+            },
+            {
+              "doc_id": 1029,
+              "score": 0.7360393046805962,
+              "title": "পরীক্ষা বন্ধ করায় শাস্তির মুখোমুখি হতে হবে শিক্ষকদের: শিক্ষা উপদেষ্টা",
+              "url": "https://www.bd-pratidin.com/national/2025/12/02/1186671",
+              "language": "bn",
+              "model": "hybrid",
+              "confidence_score": 0.9203072851273795,
+              "rank": 5
+            },
+            {
+              "doc_id": 647,
+              "score": 0.7302997438305401,
+              "title": "বিয়াম ফাউন্ডেশন প্রাথমিক বৃত্তি পরীক্ষা অনুষ্ঠিত",
+              "url": "https://www.bd-pratidin.com/city/2025/12/30/1198034",
+              "language": "bn",
+              "model": "hybrid",
+              "confidence_score": 0.899167963984192,
+              "rank": 6
+            },
+            {
+              "doc_id": 448,
+              "score": 0.7271557065821632,
+              "title": "জাহাঙ্গীরনগরে শ্রেণিকক্ষের সংকট নিরসনের দাবিতে শিক্ষার্থীদের অবস্থান কর্মসূচি",
+              "url": "https://www.prothomalo.com/bangladesh/district/j2sq0dr17h",
+              "language": "bn",
+              "model": "hybrid",
+              "confidence_score": 0.8875881907548634,
+              "rank": 7
+            },
+            {
+              "doc_id": 261,
+              "score": 0.7132104345948589,
+              "title": "কৃষিগুচ্ছের শিক্ষার্থীদের বিষয় ও বিশ্ববিদ্যালয় পছন্দক্রমের ফল প্রকাশ আজ",
+              "url": "https://www.prothomalo.com/education/admission/e3ydeedyxv",
+              "language": "bn",
+              "model": "hybrid",
+              "confidence_score": 0.8362264941599331,
+              "rank": 8
+            },
+            {
+              "doc_id": 2693,
+              "score": 0.6960893006415605,
+              "title": "স্কুলে গেলে দিনে ১০০ রুপি পাবে আসামের মেয়েরা",
+              "url": "https://www.dhakapost.com/international/3208",
+              "language": "bn",
+              "model": "hybrid",
+              "confidence_score": 0.7731678110255314,
+              "rank": 9
+            },
+            {
+              "doc_id": 1282,
+              "score": 0.49628326412703844,
+              "title": "আন্দোলনে ফিরবেন বেসরকারি অনার্স-মাস্টার্স স্তরের শিক্ষকরা",
+              "url": "https://www.banglatribune.com/educations/892553/%E0%A6%86%E0%A6%A8%E0%A7%8D%E0%A6%A6%E0%A7%8B%E0%A6%B2%E0%A6%A8%E0%A7%87-%E0%A6%AB%E0%A6%BF%E0%A6%B0%E0%A6%AC%E0%A7%87%E0%A6%A8-%E0%A6%AC%E0%A7%87%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF-%E0%A6%85%E0%A6%A8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8-%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8-%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A7%87%E0%A6%B0",
+              "language": "bn",
+              "model": "hybrid",
+              "confidence_score": 0.037264127351434466,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 37.418365478515625,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.03740978240966797,
+            "ranking_time": 7.62939453125e-06
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        }
+      },
+      "comparison": {
+        "lexical": {
+          "precision@10": 0.0,
+          "recall@50": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        },
+        "semantic": {
+          "precision@10": 0.0,
+          "recall@50": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        },
+        "fuzzy": {
+          "precision@10": 0.0,
+          "recall@50": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        },
+        "hybrid": {
+          "precision@10": 0.0,
+          "recall@50": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        }
+      },
+      "error_analysis": {
+        "query": "শিক্ষা",
+        "timestamp": "2026-01-22T22:05:40.260632",
+        "errors_found": {
+          "translation_failure": [],
+          "named_entity_mismatch": [],
+          "semantic_vs_lexical": [],
+          "cross_script_ambiguity": [],
+          "code_switching": []
+        },
+        "summary": {
+          "total_errors": 0,
+          "errors_by_category": {
+            "translation_failure": 0,
+            "named_entity_mismatch": 0,
+            "semantic_vs_lexical": 0,
+            "cross_script_ambiguity": 0,
+            "code_switching": 0
+          },
+          "has_errors": false
+        }
+      }
+    },
+    {
+      "query": "Bangladesh",
+      "timestamp": "2026-01-22T22:05:40.260684",
+      "k": 10,
+      "models": {
+        "lexical": {
+          "query": "Bangladesh",
+          "model": "lexical",
+          "results": [
+            {
+              "doc_id": 5398,
+              "score": 6.437201478223739,
+              "title": "Pakistan likely to withdraw if Bangladesh don’t play",
+              "url": "https://en.prothomalo.com/sports/cricket/arttb4a67q",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 1.0,
+              "rank": 1
+            },
+            {
+              "doc_id": 5431,
+              "score": 6.339820249419406,
+              "title": "Captains of Bangladesh and India did not shake hands after toss",
+              "url": "https://en.prothomalo.com/sports/cricket/0bgudk3r38",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.4865679095457377,
+              "rank": 2
+            },
+            {
+              "doc_id": 4423,
+              "score": 6.328790424256853,
+              "title": "Tourism development discussion held between Bangladesh and Maldives",
+              "url": "https://dailyasianage.com/news/264499/tourism-development-discussion-held-between-bangladesh-and-maldives",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.42841433867703416,
+              "rank": 3
+            },
+            {
+              "doc_id": 5595,
+              "score": 6.312826591530703,
+              "title": "Will Bangladesh have to play at 2 Indian venues? BCCI says ICC yet to communicate anything",
+              "url": "https://en.prothomalo.com/sports/cricket/eb6gizinte",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.34424674181174525,
+              "rank": 4
+            },
+            {
+              "doc_id": 5474,
+              "score": 6.304979313341649,
+              "title": "Turning point in Bangladesh",
+              "url": "https://en.prothomalo.com/opinion/op-ed/sk74t3nqb6",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.3028728087195924,
+              "rank": 5
+            },
+            {
+              "doc_id": 4622,
+              "score": 6.29866035844372,
+              "title": "Bangladesh's Independence Day: Some Remembrances",
+              "url": "https://dailyasianage.com/news/321620/bangladeshs-independence-day-some-remembrances",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.2695567963569971,
+              "rank": 6
+            },
+            {
+              "doc_id": 5625,
+              "score": 6.298373033467499,
+              "title": "Pakistan offers to host Bangladesh’s World Cup matches",
+              "url": "https://en.prothomalo.com/sports/cricket/sfxllfsi2b",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.268041906218597,
+              "rank": 7
+            },
+            {
+              "doc_id": 5425,
+              "score": 6.295992354300584,
+              "title": "Bangladesh fell short, losing to India by 18 runs",
+              "url": "https://en.prothomalo.com/sports/cricket/xyuxo6w3o4",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.2554900304990354,
+              "rank": 8
+            },
+            {
+              "doc_id": 4390,
+              "score": 6.293703382825682,
+              "title": "National security adviser meets key US officials",
+              "url": "https://dailyasianage.com/news/347105/national-security-adviser-meets-key-us-officials",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.2434216737553531,
+              "rank": 9
+            },
+            {
+              "doc_id": 4565,
+              "score": 6.280627187602338,
+              "title": "Bangladesh's fate in T20 WC to be finalised by January 21",
+              "url": "https://dailyasianage.com/news/347222/bangladeshs-fate-in-t20-wc-to-be-finalised-by-january-21",
+              "language": "en",
+              "model": "lexical_bm25",
+              "confidence_score": 0.17447883609410952,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 37.01210021972656,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.0370020866394043,
+            "ranking_time": 8.821487426757812e-06
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        },
+        "semantic": {
+          "query": "Bangladesh",
+          "model": "semantic",
+          "results": [
+            {
+              "doc_id": 4704,
+              "score": 0.6628032922744751,
+              "title": "Political Odyssey: Life & Work of the Genius behind Bangladesh",
+              "url": "https://dailyasianage.com/news/315341/political-odyssey-life--work-of-the-genius-behind-bangladesh",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6628032922744751,
+              "rank": 1
+            },
+            {
+              "doc_id": 3193,
+              "score": 0.6428091526031494,
+              "title": "Bangladesh hold Bhutan",
+              "url": "https://www.newagebd.net/post/football/288499/bangladesh-hold-bhutan",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6428091526031494,
+              "rank": 2
+            },
+            {
+              "doc_id": 3614,
+              "score": 0.6412439346313477,
+              "title": "Begum Khaleda Zia: The Beacon of Bangladesh",
+              "url": "https://en.bd-pratidin.com/national/2025/12/30/53759",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6412439346313477,
+              "rank": 3
+            },
+            {
+              "doc_id": 3523,
+              "score": 0.6394115686416626,
+              "title": "BNP’s vision for Bangladesh is to offer girls freedom, safety, opportunity: Tarique",
+              "url": "https://www.newagebd.net/post/politics/278733/bnps-vision-for-bangladesh-is-to-offer-girls-freedom-safety-opportunity-tarique",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6394115686416626,
+              "rank": 4
+            },
+            {
+              "doc_id": 4734,
+              "score": 0.6371585726737976,
+              "title": "India Bangladesh Relationship: In Which Direction Is It Proceeding?",
+              "url": "https://dailyasianage.com/news/346987/india-bangladesh-relationship-in-which-direction-is-it-proceeding",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6371585726737976,
+              "rank": 5
+            },
+            {
+              "doc_id": 3032,
+              "score": 0.6354243159294128,
+              "title": "Bangladesh beat Nepal",
+              "url": "https://www.newagebd.net/post/football/288666/bangladesh-beat-nepal",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6354243159294128,
+              "rank": 6
+            },
+            {
+              "doc_id": 5474,
+              "score": 0.6336278319358826,
+              "title": "Turning point in Bangladesh",
+              "url": "https://en.prothomalo.com/opinion/op-ed/sk74t3nqb6",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6336278319358826,
+              "rank": 7
+            },
+            {
+              "doc_id": 3368,
+              "score": 0.6319786906242371,
+              "title": "Bangladesh out to prove their worth",
+              "url": "https://www.newagebd.net/post/football/278893/bangladesh-out-to-prove-their-worth",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6319786906242371,
+              "rank": 8
+            },
+            {
+              "doc_id": 4277,
+              "score": 0.6295490264892578,
+              "title": "Transforming Bangladesh’s Healthcare: From Outbound Patients to a Global Medical Tourism Hub",
+              "url": "https://dailyasianage.com/news/346809/transforming-bangladeshs-healthcare-from-outbound-patients-to-a-global-medical-tourism-hub",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.6295490264892578,
+              "rank": 9
+            },
+            {
+              "doc_id": 3056,
+              "score": 0.618956446647644,
+              "title": "‘Yes’ vote to bring new Bangladesh: Yunus",
+              "url": "https://www.newagebd.net/post/country/288641/yes-vote-to-bring-new-bangladesh-yunus",
+              "language": "en",
+              "model": "semantic",
+              "confidence_score": 0.618956446647644,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 5.674600601196289,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.005666017532348633,
+            "ranking_time": 7.3909759521484375e-06
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        },
+        "fuzzy": {
+          "query": "Bangladesh",
+          "model": "fuzzy",
+          "results": [
+            {
+              "doc_id": 3032,
+              "score": 0.6451612903225806,
+              "title": "Bangladesh beat Nepal",
+              "url": "https://www.newagebd.net/post/football/288666/bangladesh-beat-nepal",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.6451612903225806,
+              "rank": 1
+            },
+            {
+              "doc_id": 3692,
+              "score": 0.6451612903225806,
+              "title": "Fog across Bangladesh",
+              "url": "https://en.bd-pratidin.com/national/2025/12/29/53683",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.6451612903225806,
+              "rank": 2
+            },
+            {
+              "doc_id": 3193,
+              "score": 0.625,
+              "title": "Bangladesh hold Bhutan",
+              "url": "https://www.newagebd.net/post/football/288499/bangladesh-hold-bhutan",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.625,
+              "rank": 3
+            },
+            {
+              "doc_id": 5474,
+              "score": 0.5405405405405406,
+              "title": "Turning point in Bangladesh",
+              "url": "https://en.prothomalo.com/opinion/op-ed/sk74t3nqb6",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.5405405405405406,
+              "rank": 4
+            },
+            {
+              "doc_id": 1069,
+              "score": 0.5,
+              "title": "সহজ জয়ে সিরিজ বাংলাদেশের",
+              "url": "https://www.bd-pratidin.com/sports/2025/12/02/1186712",
+              "language": "bn",
+              "model": "fuzzy",
+              "confidence_score": 0.5,
+              "rank": 5
+            },
+            {
+              "doc_id": 3505,
+              "score": 0.4878048780487805,
+              "title": "Bangladesh U-21 squad announced",
+              "url": "https://www.newagebd.net/post/hockey/278751/bangladesh-u-21-squad-announced",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.4878048780487805,
+              "rank": 6
+            },
+            {
+              "doc_id": 1514,
+              "score": 0.4705882352941176,
+              "title": "আসামে আরও ১৪ বাংলাদেশি আটক",
+              "url": "https://www.banglatribune.com/foreign/india/896273/%E0%A6%86%E0%A6%B8%E0%A6%BE%E0%A6%AE%E0%A7%87-%E0%A6%86%E0%A6%B0%E0%A6%93-%E0%A7%A7%E0%A7%AA-%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%86%E0%A6%9F%E0%A6%95",
+              "language": "bn",
+              "model": "fuzzy",
+              "confidence_score": 0.4705882352941176,
+              "rank": 7
+            },
+            {
+              "doc_id": 3023,
+              "score": 0.4545454545454546,
+              "title": "MG Bangladesh launches hybrid SUVs",
+              "url": "https://www.newagebd.net/post/automobile/288675/mg-bangladesh-launches-hybrid-suvs",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.4545454545454546,
+              "rank": 8
+            },
+            {
+              "doc_id": 3368,
+              "score": 0.4444444444444444,
+              "title": "Bangladesh out to prove their worth",
+              "url": "https://www.newagebd.net/post/football/278893/bangladesh-out-to-prove-their-worth",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.4444444444444444,
+              "rank": 9
+            },
+            {
+              "doc_id": 4139,
+              "score": 0.4444444444444444,
+              "title": "Zubaida Rahman on way to Bangladesh",
+              "url": "https://en.bd-pratidin.com/national/2025/12/05/52123",
+              "language": "en",
+              "model": "fuzzy",
+              "confidence_score": 0.4444444444444444,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 40.762901306152344,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.040754079818725586,
+            "ranking_time": 7.3909759521484375e-06
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        },
+        "hybrid": {
+          "query": "Bangladesh",
+          "model": "hybrid",
+          "results": [
+            {
+              "doc_id": 5474,
+              "score": 0.8065437570076088,
+              "title": "Turning point in Bangladesh",
+              "url": "https://en.prothomalo.com/opinion/op-ed/sk74t3nqb6",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 1.0,
+              "rank": 1
+            },
+            {
+              "doc_id": 3032,
+              "score": 0.8017717147167247,
+              "title": "Bangladesh beat Nepal",
+              "url": "https://www.newagebd.net/post/football/288666/bangladesh-beat-nepal",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.9851243264354699,
+              "rank": 2
+            },
+            {
+              "doc_id": 4675,
+              "score": 0.7917669547379846,
+              "title": "Bangladesh makes winning start in SAFF Women's Futsal Bangladesh men's team to face Maldives today",
+              "url": "https://dailyasianage.com/news/347101/bangladesh-makes-winning-start-in-saff-womens-futsal-bangladesh-mens-team-to-face-maldives-today",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.9539369365375404,
+              "rank": 3
+            },
+            {
+              "doc_id": 4565,
+              "score": 0.791145740138723,
+              "title": "Bangladesh's fate in T20 WC to be finalised by January 21",
+              "url": "https://dailyasianage.com/news/347222/bangladeshs-fate-in-t20-wc-to-be-finalised-by-january-21",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.9520004521082658,
+              "rank": 4
+            },
+            {
+              "doc_id": 5916,
+              "score": 0.7778685452333711,
+              "title": "India to tour Bangladesh in September",
+              "url": "https://en.prothomalo.com/sports/cricket/2gbmce6vo0",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.9106120474744788,
+              "rank": 5
+            },
+            {
+              "doc_id": 5761,
+              "score": 0.7764835620063896,
+              "title": "ICC tells Bangladesh they must travel to India to play World Cup",
+              "url": "https://en.prothomalo.com/sports/cricket/ytjlsyq19u",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.9062947013318674,
+              "rank": 6
+            },
+            {
+              "doc_id": 3405,
+              "score": 0.7757465994174186,
+              "title": "Bangladesh mulls signing FTA with EU",
+              "url": "https://www.newagebd.net/post/trade-commerce/278854/bangladesh-mulls-signing-fta-with-eu",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.9039974008817552,
+              "rank": 7
+            },
+            {
+              "doc_id": 5398,
+              "score": 0.5,
+              "title": "Pakistan likely to withdraw if Bangladesh don’t play",
+              "url": "https://en.prothomalo.com/sports/cricket/arttb4a67q",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.04442488466610562,
+              "rank": 8
+            },
+            {
+              "doc_id": 5431,
+              "score": 0.4924360586557868,
+              "title": "Captains of Bangladesh and India did not shake hands after toss",
+              "url": "https://en.prothomalo.com/sports/cricket/0bgudk3r38",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.02084614930730361,
+              "rank": 9
+            },
+            {
+              "doc_id": 4423,
+              "score": 0.4915793334779386,
+              "title": "Tourism development discussion held between Bangladesh and Maldives",
+              "url": "https://dailyasianage.com/news/264499/tourism-development-discussion-held-between-bangladesh-and-maldives",
+              "language": "en",
+              "model": "hybrid",
+              "confidence_score": 0.018175518306289745,
+              "rank": 10
+            }
+          ],
+          "total_time_ms": 41.240692138671875,
+          "timing_breakdown": {
+            "translation_time": 0,
+            "retrieval_time": 0.04123210906982422,
+            "ranking_time": 7.62939453125e-06
+          },
+          "low_confidence_warning": null,
+          "num_results_found": 10
+        }
+      },
+      "comparison": {
+        "lexical": {
+          "precision@10": 0.0,
+          "recall@50": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        },
+        "semantic": {
+          "precision@10": 0.0,
+          "recall@50": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        },
+        "fuzzy": {
+          "precision@10": 0.0,
+          "recall@50": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        },
+        "hybrid": {
+          "precision@10": 0.0,
+          "recall@50": 0.0,
+          "ndcg@10": 0.0,
+          "mrr": 0.0
+        }
+      },
+      "error_analysis": {
+        "query": "Bangladesh",
+        "timestamp": "2026-01-22T22:05:40.385487",
+        "errors_found": {
+          "translation_failure": [],
+          "named_entity_mismatch": [],
+          "semantic_vs_lexical": [],
+          "cross_script_ambiguity": [
+            {
+              "query": "Bangladesh",
+              "type": "transliteration_ambiguity",
+              "variations": [
+                "Bangla Desh",
+                "বাংলাদেশ",
+                "Bangladesh"
+              ],
+              "analysis": "Query has multiple transliteration variations: ['Bangla Desh', 'বাংলাদেশ', 'Bangladesh']"
+            }
+          ],
+          "code_switching": []
+        },
+        "summary": {
+          "total_errors": 1,
+          "errors_by_category": {
+            "translation_failure": 0,
+            "named_entity_mismatch": 0,
+            "semantic_vs_lexical": 0,
+            "cross_script_ambiguity": 1,
+            "code_switching": 0
+          },
+          "has_errors": true
+        }
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "lexical": {
+      "avg_precision@10": 0.0,
+      "std_precision@10": 0.0,
+      "min_precision@10": 0.0,
+      "max_precision@10": 0.0,
+      "avg_recall@50": 0.0,
+      "std_recall@50": 0.0,
+      "min_recall@50": 0.0,
+      "max_recall@50": 0.0,
+      "avg_ndcg@10": 0.0,
+      "std_ndcg@10": 0.0,
+      "min_ndcg@10": 0.0,
+      "max_ndcg@10": 0.0,
+      "avg_mrr": 0.0,
+      "std_mrr": 0.0,
+      "min_mrr": 0.0,
+      "max_mrr": 0.0
+    },
+    "semantic": {
+      "avg_precision@10": 0.13333333333333333,
+      "std_precision@10": 0.1885618083164127,
+      "min_precision@10": 0.0,
+      "max_precision@10": 0.4,
+      "avg_recall@50": 0.26666666666666666,
+      "std_recall@50": 0.3771236166328254,
+      "min_recall@50": 0.0,
+      "max_recall@50": 0.8,
+      "avg_ndcg@10": 0.23474332908110804,
+      "std_ndcg@10": 0.3319771996631135,
+      "min_ndcg@10": 0.0,
+      "max_ndcg@10": 0.7042299872433241,
+      "avg_mrr": 0.3333333333333333,
+      "std_mrr": 0.4714045207910317,
+      "min_mrr": 0.0,
+      "max_mrr": 1.0
+    },
+    "fuzzy": {
+      "avg_precision@10": 0.0,
+      "std_precision@10": 0.0,
+      "min_precision@10": 0.0,
+      "max_precision@10": 0.0,
+      "avg_recall@50": 0.0,
+      "std_recall@50": 0.0,
+      "min_recall@50": 0.0,
+      "max_recall@50": 0.0,
+      "avg_ndcg@10": 0.0,
+      "std_ndcg@10": 0.0,
+      "min_ndcg@10": 0.0,
+      "max_ndcg@10": 0.0,
+      "avg_mrr": 0.0,
+      "std_mrr": 0.0,
+      "min_mrr": 0.0,
+      "max_mrr": 0.0
+    },
+    "hybrid": {
+      "avg_precision@10": 0.03333333333333333,
+      "std_precision@10": 0.047140452079103175,
+      "min_precision@10": 0.0,
+      "max_precision@10": 0.1,
+      "avg_recall@50": 0.06666666666666667,
+      "std_recall@50": 0.09428090415820635,
+      "min_recall@50": 0.0,
+      "max_recall@50": 0.2,
+      "avg_ndcg@10": 0.05652670087893602,
+      "std_ndcg@10": 0.07994082701919847,
+      "min_ndcg@10": 0.0,
+      "max_ndcg@10": 0.16958010263680806,
+      "avg_mrr": 0.1111111111111111,
+      "std_mrr": 0.15713484026367722,
+      "min_mrr": 0.0,
+      "max_mrr": 0.3333333333333333
+    }
+  },
+  "performance_stats": {
+    "timing": {
+      "avg_time_ms": 33.497631549835205,
+      "min_time_ms": 5.674600601196289,
+      "max_time_ms": 76.48873329162598
+    },
+    "confidence": {
+      "avg_top_confidence": 0.8057512116118856,
+      "min_top_confidence": 0.4444444444444444,
+      "max_top_confidence": 1.0
+    },
+    "low_confidence_queries": 0,
+    "total_queries_evaluated": 3
+  },
+  "error_analysis": {
+    "total_queries": 3,
+    "timestamp": "2026-01-22T22:05:40.385605",
+    "overall_summary": {
+      "total_errors": 2,
+      "queries_with_errors": 2,
+      "most_common_error": "semantic_vs_lexical",
+      "error_rate": 0.6666666666666666
+    },
+    "category_summaries": {
+      "translation_failure": {
+        "count": 0,
+        "description": "Query translation errors leading to wrong retrieval",
+        "percentage": 0.0
+      },
+      "named_entity_mismatch": {
+        "count": 0,
+        "description": "Named entities not matching across languages",
+        "percentage": 0.0
+      },
+      "semantic_vs_lexical": {
+        "count": 1,
+        "description": "Cases where semantic succeeds but lexical fails (or vice versa)",
+        "percentage": 50.0
+      },
+      "cross_script_ambiguity": {
+        "count": 1,
+        "description": "Ambiguity in transliteration across scripts",
+        "percentage": 50.0
+      },
+      "code_switching": {
+        "count": 0,
+        "description": "Queries mixing Bangla and English words",
+        "percentage": 0.0
+      }
+    },
+    "detailed_examples": {
+      "translation_failure": [],
+      "named_entity_mismatch": [],
+      "semantic_vs_lexical": [
+        {
+          "query": "election",
+          "type": "semantic_win",
+          "lexical_relevant": 0,
+          "semantic_relevant": 4,
+          "lexical_top3": [
+            "70pc of people want to vote for enP",
+            "Over 2.23 lakh expatriates register to vote in nat",
+            "JnUCSU election: Chhatra Shibir-backed candidates "
+          ],
+          "semantic_top3": [
+            "‘One-sided, engineered’ elections planned at the ‘",
+            "Elections and politics: Split in Jamaat-led allian",
+            "Deepfake and cheapfake fears in elections, 10 tact"
+          ],
+          "analysis": "Semantic model found 4 relevant docs vs 0 for lexical"
+        }
+      ],
+      "cross_script_ambiguity": [
+        {
+          "query": "Bangladesh",
+          "type": "transliteration_ambiguity",
+          "variations": [
+            "Bangla Desh",
+            "বাংলাদেশ",
+            "Bangladesh"
+          ],
+          "analysis": "Query has multiple transliteration variations: ['Bangla Desh', 'বাংলাদেশ', 'Bangladesh']"
+        }
+      ],
+      "code_switching": []
+    }
+  },
+  "target_status": {
+    "lexical": {
+      "precision@10": {
+        "computed": 0.0,
+        "target": 0.6,
+        "passed": false,
+        "gap": -0.6
+      },
+      "recall@50": {
+        "computed": 0.0,
+        "target": 0.5,
+        "passed": false,
+        "gap": -0.5
+      },
+      "ndcg@10": {
+        "computed": 0.0,
+        "target": 0.5,
+        "passed": false,
+        "gap": -0.5
+      },
+      "mrr": {
+        "computed": 0.0,
+        "target": 0.4,
+        "passed": "False",
+        "gap": -0.4
+      },
+      "overall_passed": false
+    },
+    "semantic": {
+      "precision@10": {
+        "computed": 0.13333333333333333,
+        "target": 0.6,
+        "passed": false,
+        "gap": -0.4666666666666667
+      },
+      "recall@50": {
+        "computed": 0.26666666666666666,
+        "target": 0.5,
+        "passed": false,
+        "gap": -0.23333333333333334
+      },
+      "ndcg@10": {
+        "computed": 0.23474332908110804,
+        "target": 0.5,
+        "passed": false,
+        "gap": -0.26525667091889193
+      },
+      "mrr": {
+        "computed": 0.3333333333333333,
+        "target": 0.4,
+        "passed": "False",
+        "gap": -0.06666666666666671
+      },
+      "overall_passed": false
+    },
+    "fuzzy": {
+      "precision@10": {
+        "computed": 0.0,
+        "target": 0.6,
+        "passed": false,
+        "gap": -0.6
+      },
+      "recall@50": {
+        "computed": 0.0,
+        "target": 0.5,
+        "passed": false,
+        "gap": -0.5
+      },
+      "ndcg@10": {
+        "computed": 0.0,
+        "target": 0.5,
+        "passed": false,
+        "gap": -0.5
+      },
+      "mrr": {
+        "computed": 0.0,
+        "target": 0.4,
+        "passed": "False",
+        "gap": -0.4
+      },
+      "overall_passed": false
+    },
+    "hybrid": {
+      "precision@10": {
+        "computed": 0.03333333333333333,
+        "target": 0.6,
+        "passed": false,
+        "gap": -0.5666666666666667
+      },
+      "recall@50": {
+        "computed": 0.06666666666666667,
+        "target": 0.5,
+        "passed": false,
+        "gap": -0.43333333333333335
+      },
+      "ndcg@10": {
+        "computed": 0.05652670087893602,
+        "target": 0.5,
+        "passed": false,
+        "gap": -0.443473299121064
+      },
+      "mrr": {
+        "computed": 0.1111111111111111,
+        "target": 0.4,
+        "passed": "False",
+        "gap": -0.2888888888888889
+      },
+      "overall_passed": false
+    }
+  },
+  "total_evaluation_time": 0.40257692337036133
+}
