@@ -1,9 +1,9 @@
 {
-  "total_documents": 1785,
-  "total_unique_terms": 19939,
-  "average_doc_length": 314.2470588235294,
+  "total_documents": 5957,
+  "total_unique_terms": 28375,
+  "average_doc_length": 476.3814000335739,
   "languages": {
-    "bn": 1199,
-    "en": 586
+    "bn": 2993,
+    "en": 2964
   }
 }

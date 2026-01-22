@@ -448,8 +448,20 @@ def main():
     # Define paths to article JSON files
     article_sources = [
         ("Module_A/Bangla_DB/ProthomAlo/articles.json", "ProthomAlo (Bangla)"),
+        ("Module_A/Bangla_DB/BangladeshProtidin/articles.json", "BangladeshProtidin (Bangla)"),
+        ("Module_A/Bangla_DB/BanglaTribune/articles.json", "BanglaTribune (Bangla)"),
+        ("Module_A/Bangla_DB/newsbangla24/articles.json", "NewsBangla24 (Bangla)"),
         ("Module_A/Bangla_DB/DhakaPost/articles.json", "DhakaPost (Bangla)"),
+        
         ("Module_A/English_DB/newagebd/articles.json", "NewAge (English)"),
+        ("Module_A/English_DB/BangladeshProtidin/articles.json", "BangladeshProtidin (English)"),
+        ("Module_A/English_DB/DailyAsianAge/articles.json", "DailyAsianAge (English)"),
+        ("Module_A/English_DB/DhakaTribune/articles.json", "DhakaTribune (English)"),
+        ("Module_A/English_DB/ProthomAlo/articles.json", "ProthomAlo (English)")
+        
+        
+        
+        
     ]
     
     total_articles = 0
