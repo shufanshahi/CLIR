@@ -58,6 +58,10 @@ class CLIRRetriever:
     def _load_embeddings(self):
         """Load pre-computed document embeddings and mapping."""
         try:
+            # Clear CUDA cache to free up fragmented memory
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+
             emb_path = os.path.join(self.embedding_dir, "doc_embeddings.pt")
             map_path = os.path.join(self.embedding_dir, "doc_id_mapping.json")
             

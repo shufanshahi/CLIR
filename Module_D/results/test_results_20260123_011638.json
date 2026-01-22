@@ -1,0 +1,32 @@
+{
+  "ranking_scoring": {
+    "status": "FAILED",
+    "error": "No module named 'pandas'",
+    "timestamp": "2026-01-23T01:16:38.917801"
+  },
+  "evaluation_metrics": {
+    "status": "FAILED",
+    "error": "No module named 'pandas'",
+    "timestamp": "2026-01-23T01:16:38.918290"
+  },
+  "external_comparison": {
+    "status": "FAILED",
+    "error": "No module named 'pandas'",
+    "timestamp": "2026-01-23T01:16:38.918742"
+  },
+  "relevance_labeling": {
+    "status": "FAILED",
+    "error": "No module named 'pandas'",
+    "timestamp": "2026-01-23T01:16:38.919179"
+  },
+  "error_analysis": {
+    "status": "FAILED",
+    "error": "No module named 'pandas'",
+    "timestamp": "2026-01-23T01:16:38.919587"
+  },
+  "integration": {
+    "status": "FAILED",
+    "error": "No module named 'pandas'",
+    "timestamp": "2026-01-23T01:16:38.919915"
+  }
+}
