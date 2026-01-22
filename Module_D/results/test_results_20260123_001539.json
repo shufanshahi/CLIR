@@ -1,0 +1,32 @@
+{
+  "ranking_scoring": {
+    "status": "FAILED",
+    "error": "No module named 'torch'",
+    "timestamp": "2026-01-23T00:15:39.434948"
+  },
+  "evaluation_metrics": {
+    "status": "FAILED",
+    "error": "No module named 'torch'",
+    "timestamp": "2026-01-23T00:15:39.436204"
+  },
+  "external_comparison": {
+    "status": "FAILED",
+    "error": "No module named 'torch'",
+    "timestamp": "2026-01-23T00:15:39.437415"
+  },
+  "relevance_labeling": {
+    "status": "FAILED",
+    "error": "No module named 'torch'",
+    "timestamp": "2026-01-23T00:15:39.438757"
+  },
+  "error_analysis": {
+    "status": "FAILED",
+    "error": "No module named 'torch'",
+    "timestamp": "2026-01-23T00:15:39.439829"
+  },
+  "integration": {
+    "status": "FAILED",
+    "error": "No module named 'torch'",
+    "timestamp": "2026-01-23T00:15:39.441239"
+  }
+}

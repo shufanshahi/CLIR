@@ -65,24 +65,45 @@ class CLIRRanker:
         # Track query processing time
         proc_start = time.time()
         
-        # Get results from specified model
-        if model == 'lexical':
-            results = self.retriever.search_lexical(query, k=k*2)  # Get more for better ranking
-        elif model == 'semantic':
-            results = self.retriever.search_semantic(query, k=k*2)
-        elif model == 'fuzzy':
-            results = self.retriever.search_fuzzy(query, k=k*2)
-        elif model == 'hybrid':
-            results = self.retriever.search_hybrid(query, k=k*2)
-        else:
-            raise ValueError(f"Unknown model: {model}")
-            
-        timing_breakdown['retrieval_time'] = time.time() - proc_start
+        ranked_results = []
         
-        # Normalize scores and calculate confidence
-        rank_start = time.time()
-        ranked_results = self._normalize_and_rank(results, model)
-        timing_breakdown['ranking_time'] = time.time() - rank_start
+        if model == 'hybrid':
+            # For hybrid, retrieve from all models, normalize, then combine
+            lex_results = self.retriever.search_lexical(query, k=k*3)
+            sem_results = self.retriever.search_semantic(query, k=k*3)
+            fuz_results = self.retriever.search_fuzzy(query, k=k*3)
+            
+            timing_breakdown['retrieval_time'] = time.time() - proc_start
+            
+            rank_start = time.time()
+            
+            # Normalize scores for each model independently
+            norm_lex = self._normalize_scores(lex_results, 'lexical')
+            norm_sem = self._normalize_scores(sem_results, 'semantic')
+            norm_fuz = self._normalize_scores(fuz_results, 'fuzzy')
+            
+            # Combine scores
+            ranked_results = self._combine_results(norm_lex, norm_sem, norm_fuz)
+            
+            timing_breakdown['ranking_time'] = time.time() - rank_start
+            
+        else:
+            # For single models
+            if model == 'lexical':
+                results = self.retriever.search_lexical(query, k=k*2)
+            elif model == 'semantic':
+                results = self.retriever.search_semantic(query, k=k*2)
+            elif model == 'fuzzy':
+                results = self.retriever.search_fuzzy(query, k=k*2)
+            else:
+                raise ValueError(f"Unknown model: {model}")
+                
+            timing_breakdown['retrieval_time'] = time.time() - proc_start
+            
+            # Normalize scores and calculate confidence
+            rank_start = time.time()
+            ranked_results = self._normalize_and_rank(results, model)
+            timing_breakdown['ranking_time'] = time.time() - rank_start
         
         # Take top k
         final_results = ranked_results[:k]
@@ -92,7 +113,7 @@ class CLIRRanker:
         
         # Check for low confidence warning
         low_confidence_warning = None
-        if final_results and final_results[0]['confidence_score'] < self.confidence_threshold:
+        if final_results and final_results[0].get('confidence_score', 0) < self.confidence_threshold:
             low_confidence_warning = (
                 f"⚠️ Warning: Retrieved results may not be relevant. "
                 f"Matching confidence is low (score: {final_results[0]['confidence_score']:.3f})."
@@ -107,57 +128,79 @@ class CLIRRanker:
             'low_confidence_warning': low_confidence_warning,
             'num_results_found': len(final_results)
         }
-    
-    def _normalize_and_rank(self, results: List[Dict], model: str) -> List[Dict]:
-        """
-        Normalize scores to [0,1] range and add confidence scoring.
-        
-        Args:
-            results: List of retrieval results
-            model: Model type used for retrieval
-            
-        Returns:
-            List of results with normalized scores and confidence
-        """
+
+    def _normalize_scores(self, results: List[Dict], model_type: str) -> List[Dict]:
+        """Normalize scores for a specific model type to [0,1]."""
         if not results:
             return []
-        
-        # Normalize scores based on model type
-        if model == 'semantic':
-            # Semantic scores are already cosine similarity (roughly 0-1)
-            for result in results:
-                result['confidence_score'] = max(0.0, result['score'])  # Clip negative values
-                
-        elif model == 'fuzzy':
-            # Fuzzy scores are already normalized (0-1)
-            for result in results:
-                result['confidence_score'] = result['score']
-                
-        else:  # lexical, hybrid, etc.
-            # These scores need normalization
-            scores = [r['score'] for r in results]
-            if scores:
-                min_score = min(scores)
-                max_score = max(scores)
-                
-                if max_score > min_score:
-                    # Min-max normalization
-                    for result in results:
-                        norm_score = (result['score'] - min_score) / (max_score - min_score)
-                        result['confidence_score'] = norm_score
-                else:
-                    # All scores are the same
-                    for result in results:
-                        result['confidence_score'] = 0.5
-        
-        # Sort by confidence score (descending)
-        results.sort(key=lambda x: x['confidence_score'], reverse=True)
-        
-        # Add rank information
-        for i, result in enumerate(results):
-            result['rank'] = i + 1
             
-        return results
+        normalized_results = [r.copy() for r in results]
+        scores = [r['score'] for r in normalized_results]
+        
+        if not scores:
+            return normalized_results
+
+        if model_type == 'semantic':
+            for result in normalized_results:
+                result['confidence_score'] = max(0.0, min(1.0, result['score']))
+        elif model_type == 'fuzzy':
+            for result in normalized_results:
+                result['confidence_score'] = max(0.0, min(1.0, result['score']))
+        else:
+            min_score = min(scores)
+            max_score = max(scores)
+            if max_score > min_score:
+                for result in normalized_results:
+                    result['confidence_score'] = (result['score'] - min_score) / (max_score - min_score)
+            else:
+                for result in normalized_results:
+                    result['confidence_score'] = 1.0 if max_score > 0 else 0.0
+                    
+        return normalized_results
+
+    def _combine_results(self, lex_results: List[Dict], sem_results: List[Dict], fuz_results: List[Dict]) -> List[Dict]:
+        """Combine normalized results using model weights."""
+        combined_scores = defaultdict(float)
+        doc_metadata = {}
+        
+        def process_list(results, weight):
+            for r in results:
+                doc_id = r['doc_id']
+                score = r.get('confidence_score', 0)
+                combined_scores[doc_id] += score * weight
+                if doc_id not in doc_metadata:
+                    doc_metadata[doc_id] = {
+                        'doc_id': doc_id,
+                        'title': r.get('title', ''),
+                        'url': r.get('url', ''),
+                        'language': r.get('language', ''),
+                        'model': 'hybrid'
+                    }
+
+        process_list(lex_results, self.model_weights.get('lexical_bm25', 0.3))
+        process_list(sem_results, self.model_weights.get('semantic', 0.5))
+        process_list(fuz_results, self.model_weights.get('fuzzy', 0.2))
+        
+        sorted_docs = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
+        
+        final_results = []
+        for doc_id, score in sorted_docs:
+            meta = doc_metadata[doc_id]
+            result_item = meta.copy()
+            result_item['score'] = score
+            result_item['confidence_score'] = score
+            result_item['rank'] = len(final_results) + 1
+            final_results.append(result_item)
+            
+        return final_results
+    
+    def _normalize_and_rank(self, results: List[Dict], model: str) -> List[Dict]:
+        """Normalize scores to [0,1] range and add confidence scoring."""
+        normalized = self._normalize_scores(results, model)
+        normalized.sort(key=lambda x: x['confidence_score'], reverse=True)
+        for i, result in enumerate(normalized):
+            result['rank'] = i + 1
+        return normalized
     
     def batch_rank(self, queries: List[str], k: int = 10, model: str = 'hybrid') -> List[Dict]:
         """
