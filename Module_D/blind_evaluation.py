@@ -158,6 +158,63 @@ class BlindEvaluator:
                     score = item['overlaps'].get(pair, 0.0)
                     print(f"  * {pair:<20}: {score:.1%}")
 
+    def generate_visualizations(self, agreement_matrix, perf_stats, per_query_stats, output_dir="Module_D/results/plots"):
+        """Generate visualizations for blind evaluation results."""
+        os.makedirs(output_dir, exist_ok=True)
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        
+        # 1. Performance Comparison (Time)
+        plt.figure(figsize=(10, 6))
+        models = list(perf_stats.keys())
+        times = [perf_stats[m]['avg_time_ms'] for m in models]
+        sns.barplot(x=models, y=times)
+        plt.title('Average Retrieval Time by Model')
+        plt.ylabel('Time (ms)')
+        plt.xlabel('Model')
+        plt.savefig(f"{output_dir}/avg_time_{timestamp}.png")
+        plt.close()
+        print(f"Saved time comparison plot to {output_dir}/avg_time_{timestamp}.png")
+        
+        # 2. Inter-Model Agreement Heatmap
+        plt.figure(figsize=(8, 6))
+        sns.heatmap(agreement_matrix, annot=True, cmap='YlGnBu', vmin=0, vmax=1)
+        plt.title('Inter-Model Agreement (Jaccard Similarity)')
+        plt.tight_layout()
+        plt.savefig(f"{output_dir}/agreement_matrix_{timestamp}.png")
+        plt.close()
+        print(f"Saved agreement matrix plot to {output_dir}/agreement_matrix_{timestamp}.png")
+
+        # 3. Hybrid Overlap Analysis per Query
+        # Truncate queries for better visualization
+        queries_short = []
+        for item in per_query_stats:
+            q = item['query']
+            # if mixed script, take first few words
+            if len(q) > 20: 
+                queries_short.append(q[:20] + "...")
+            else:
+                queries_short.append(q)
+                
+        hybrid_sem = [item['overlaps'].get('hybrid vs semantic', 0) for item in per_query_stats]
+        hybrid_lex = [item['overlaps'].get('hybrid vs lexical', 0) for item in per_query_stats]
+        
+        df_overlap = pd.DataFrame({
+            'Query': queries_short,
+            'Hybrid vs Semantic': hybrid_sem,
+            'Hybrid vs Lexical': hybrid_lex
+        })
+        
+        df_melted = df_overlap.melt('Query', var_name='Comparison', value_name='Jaccard Index')
+        
+        plt.figure(figsize=(14, 8))
+        sns.barplot(data=df_melted, x='Jaccard Index', y='Query', hue='Comparison')
+        plt.title('Hybrid Model Bias: Semantic vs Lexical Overlap per Query')
+        plt.xlim(0, 1.1)
+        plt.tight_layout()
+        plt.savefig(f"{output_dir}/hybrid_bias_{timestamp}.png")
+        plt.close()
+        print(f"Saved hybrid bias plot to {output_dir}/hybrid_bias_{timestamp}.png")
+
 if __name__ == "__main__":
     evaluator = BlindEvaluator()
     
@@ -188,3 +245,7 @@ if __name__ == "__main__":
     # Run comparison with Top-10 results
     matrix, stats, raw_results, query_stats = evaluator.compare_models(queries, k=10)
     evaluator.print_report(matrix, stats, k=10, per_query_stats=query_stats)
+    
+    # Generate visualizations
+    evaluator.generate_visualizations(matrix, stats, query_stats)
+    evaluator.generate_visualizations(matrix, stats, query_stats)
