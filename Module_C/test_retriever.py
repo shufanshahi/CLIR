@@ -75,5 +75,13 @@ def verify_retrieval_models():
             print(f"       URL: {r['url']}")
         if not results_hyb: print("   No results found.")
 
+        # 5. Hybrid Search (3-way)
+        print("\n5. HYBRID SEARCH (3-Way: Lex + Sem + Fuz)")
+        results_hyb3 = retriever.search_hybrid(query, k=3, w_lex=0.3, w_sem=0.5, w_fuz=0.2)
+        for i, r in enumerate(results_hyb3, 1):
+            print(f"   {i}. [{r['score']:.4f}] {r['title'][:50]}... ({r['language']})")
+            print(f"       URL: {r['url']}")
+        if not results_hyb3: print("   No results found.")
+
 if __name__ == "__main__":
     verify_retrieval_models()

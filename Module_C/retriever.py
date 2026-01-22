@@ -270,20 +270,31 @@ class CLIRRetriever:
             
         return results
 
-    def search_hybrid(self, query: str, k: int = 10, alpha: float = 0.5) -> List[Dict]:
+    def search_hybrid(self, query: str, k: int = 10, alpha: Optional[float] = None, 
+                      w_lex: float = 0.3, w_sem: float = 0.5, w_fuz: float = 0.2) -> List[Dict]:
         """
-        Perform Hybrid Retrieval (Lexical + Semantic).
-        Score = alpha * Normalized_Lexical + (1 - alpha) * Normalized_Semantic
+        Perform Hybrid Retrieval (Lexical + Semantic + Fuzzy).
+        Score = w_lex * Norm_Lex + w_sem * Norm_Sem + w_fuz * Norm_Fuz
+        
+        Args:
+            alpha: Legacy parameter. If provided, uses w_lex=alpha, w_sem=1-alpha, w_fuz=0.
         """
+        # Backward compatibility
+        if alpha is not None:
+            w_lex = alpha
+            w_sem = 1.0 - alpha
+            w_fuz = 0.0
+
         # Get more results to ensure overlap for reranking
         fetch_k = k * 2
         
-        lex_results = self.search_lexical(query, k=fetch_k)
-        sem_results = self.search_semantic(query, k=fetch_k)
+        lex_results = self.search_lexical(query, k=fetch_k) if w_lex > 0 else []
+        sem_results = self.search_semantic(query, k=fetch_k) if w_sem > 0 else []
+        fuz_results = self.search_fuzzy(query, k=fetch_k) if w_fuz > 0 else []
         
         # Normalize scores to [0, 1] range
         
-        # Lexical normalization (MinMax or just Max division)
+        # Lexical normalization
         if lex_results:
             max_lex = max(r['score'] for r in lex_results)
             if max_lex > 0:
@@ -292,39 +303,54 @@ class CLIRRetriever:
             else:
                 for r in lex_results: r['norm_score'] = 0
         
-        # Semantic normalization (Cosine is -1 to 1, usually 0 to 1 for text)
+        # Semantic normalization (Cosine is -1 to 1)
         if sem_results:
-            # Semantic scores are already roughly 0-1, but let's ensure
             for r in sem_results:
                 r['norm_score'] = max(0.0, r['score']) # Clip negative
+                
+        # Fuzzy normalization (Already 0-1 from search_fuzzy, but let's ensure)
+        if fuz_results:
+            for r in fuz_results:
+                # search_fuzzy usually returns 0-1, checking just in case
+                r['norm_score'] = min(1.0, max(0.0, r['score']))
         
         # Combine
         combined_scores = defaultdict(float)
         all_metas = {}
         
+        def collect_meta(results):
+            for r in results:
+                if r['doc_id'] not in all_metas:
+                    all_metas[r['doc_id']] = r
+
+        collect_meta(lex_results)
+        collect_meta(sem_results)
+        collect_meta(fuz_results)
+        
         for r in lex_results:
-            combined_scores[r['doc_id']] += alpha * r.get('norm_score', 0)
-            all_metas[r['doc_id']] = r
+            combined_scores[r['doc_id']] += w_lex * r.get('norm_score', 0)
             
         for r in sem_results:
-            combined_scores[r['doc_id']] += (1 - alpha) * r.get('norm_score', 0)
-            if r['doc_id'] not in all_metas:
-                all_metas[r['doc_id']] = r
+            combined_scores[r['doc_id']] += w_sem * r.get('norm_score', 0)
+            
+        for r in fuz_results:
+            combined_scores[r['doc_id']] += w_fuz * r.get('norm_score', 0)
                 
         # Sort
         sorted_docs = sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)[:k]
         
         results = []
         for doc_id, score in sorted_docs:
-            meta = self.indexer.document_metadata[doc_id]
-            results.append({
-                'doc_id': doc_id,
-                'score': score,
-                'title': meta['title'],
-                'url': meta['url'],
-                'language': meta['language'],
-                'model': 'hybrid'
-            })
+            if doc_id in self.indexer.document_metadata:
+                meta = self.indexer.document_metadata[doc_id]
+                results.append({
+                    'doc_id': doc_id,
+                    'score': score,
+                    'title': meta['title'],
+                    'url': meta['url'],
+                    'language': meta['language'],
+                    'model': 'hybrid'
+                })
             
         return results
 
