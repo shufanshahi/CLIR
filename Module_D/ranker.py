@@ -73,7 +73,14 @@ class CLIRRanker:
         elif model == 'fuzzy':
             results = self.retriever.search_fuzzy(query, k=k*2)
         elif model == 'hybrid':
-            results = self.retriever.search_hybrid(query, k=k*2)
+            # Pass model weights to the hybrid search (supports 3-way fusion)
+            results = self.retriever.search_hybrid(
+                query, 
+                k=k*2, 
+                w_lex=self.model_weights.get('lexical_bm25', 0.3),
+                w_sem=self.model_weights.get('semantic', 0.5),
+                w_fuz=self.model_weights.get('fuzzy', 0.2)
+            )
         else:
             raise ValueError(f"Unknown model: {model}")
             

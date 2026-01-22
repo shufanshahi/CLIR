@@ -1,23 +1,8 @@
 {
-  "timestamp": "2026-01-23T01:32:32.538866",
-  "queries": [
-    "election",
-    "শিক্ষা",
-    "Bangladesh"
-  ],
-  "k": 10,
-  "models": [
-    "lexical",
-    "semantic",
-    "fuzzy",
-    "hybrid"
-  ],
-  "individual_results": [
-    {
-      "query": "election",
-      "timestamp": "2026-01-23T01:32:32.538900",
-      "k": 10,
-      "models": {
+  "ranking_scoring": {
+    "status": "PASSED",
+    "details": {
+      "election": {
         "lexical": {
           "query": "election",
           "model": "lexical",
@@ -123,11 +108,11 @@
               "rank": 10
             }
           ],
-          "total_time_ms": 101.50337219238281,
+          "total_time_ms": 355.55315017700195,
           "timing_breakdown": {
             "translation_time": 0,
-            "retrieval_time": 0.10149264335632324,
-            "ranking_time": 8.58306884765625e-06
+            "retrieval_time": 0.3555412292480469,
+            "ranking_time": 1.0013580322265625e-05
           },
           "low_confidence_warning": null,
           "num_results_found": 10
@@ -136,128 +121,14 @@
           "query": "election",
           "model": "semantic",
           "results": [],
-          "total_time_ms": 0.0019073486328125,
+          "total_time_ms": 0.022172927856445312,
           "timing_breakdown": {
             "translation_time": 0,
-            "retrieval_time": 7.152557373046875e-07,
-            "ranking_time": 2.384185791015625e-07
+            "retrieval_time": 1.9073486328125e-06,
+            "ranking_time": 4.76837158203125e-07
           },
           "low_confidence_warning": null,
           "num_results_found": 0
-        },
-        "fuzzy": {
-          "query": "election",
-          "model": "fuzzy",
-          "results": [
-            {
-              "doc_id": 910,
-              "score": 0.6666666666666667,
-              "title": "নির্বাচনি প্রচার",
-              "url": "https://www.bd-pratidin.com/city/2025/12/02/1186548",
-              "language": "bn",
-              "model": "fuzzy",
-              "confidence_score": 0.6666666666666667,
-              "rank": 1
-            },
-            {
-              "doc_id": 667,
-              "score": 0.48484848484848486,
-              "title": "ঐতিহাসিক জকসু নির্বাচন আজ",
-              "url": "https://www.bd-pratidin.com/last-page/2025/12/30/1198054",
-              "language": "bn",
-              "model": "fuzzy",
-              "confidence_score": 0.48484848484848486,
-              "rank": 2
-            },
-            {
-              "doc_id": 5437,
-              "score": 0.4516129032258065,
-              "title": "Media convention begins",
-              "url": "https://en.prothomalo.com/bangladesh/l4vrssiwf8",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.4516129032258065,
-              "rank": 3
-            },
-            {
-              "doc_id": 59,
-              "score": 0.4444444444444444,
-              "title": "নির্বাচনী প্রচারের প্রস্তুতি",
-              "url": "https://www.prothomalo.com/photo/bangladesh/mnbjosfxcv",
-              "language": "bn",
-              "model": "fuzzy",
-              "confidence_score": 0.4444444444444444,
-              "rank": 4
-            },
-            {
-              "doc_id": 5362,
-              "score": 0.4117647058823529,
-              "title": "ICMAB elects new president",
-              "url": "https://en.prothomalo.com/business/jyv8famr7p",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.4117647058823529,
-              "rank": 5
-            },
-            {
-              "doc_id": 638,
-              "score": 0.41025641025641024,
-              "title": "নির্বাচনি তোড়জোড় জাপার দুই অংশে",
-              "url": "https://www.bd-pratidin.com/first-page/2025/12/30/1198025",
-              "language": "bn",
-              "model": "fuzzy",
-              "confidence_score": 0.41025641025641024,
-              "rank": 6
-            },
-            {
-              "doc_id": 1647,
-              "score": 0.41025641025641024,
-              "title": "জাকসু নির্বাচনের তফসিল ঘোষণা আজ",
-              "url": "https://www.banglatribune.com/my-campus/896407/%E0%A6%9C%E0%A6%BE%E0%A6%95%E0%A6%B8%E0%A7%81-%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A6%BE%E0%A6%9A%E0%A6%A8%E0%A7%87%E0%A6%B0-%E0%A6%A4%E0%A6%AB%E0%A6%B8%E0%A6%BF%E0%A6%B2-%E0%A6%98%E0%A7%8B%E0%A6%B7%E0%A6%A3%E0%A6%BE-%E0%A6%86%E0%A6%9C",
-              "language": "bn",
-              "model": "fuzzy",
-              "confidence_score": 0.41025641025641024,
-              "rank": 7
-            },
-            {
-              "doc_id": 3076,
-              "score": 0.4,
-              "title": "3 electrocuted in Gopalganj",
-              "url": "https://www.newagebd.net/post/country/288619/3-electrocuted-in-gopalganj",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.4,
-              "rank": 8
-            },
-            {
-              "doc_id": 4238,
-              "score": 0.4,
-              "title": "Changes in education system",
-              "url": "https://dailyasianage.com/news/229617/changes-in-education-system",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.4,
-              "rank": 9
-            },
-            {
-              "doc_id": 709,
-              "score": 0.3902439024390244,
-              "title": "তারেক রহমান ও ন্যায্যতার নির্বাচন",
-              "url": "https://www.bd-pratidin.com/editorial/2025/12/30/1198096",
-              "language": "bn",
-              "model": "fuzzy",
-              "confidence_score": 0.3902439024390244,
-              "rank": 10
-            }
-          ],
-          "total_time_ms": 48.22587966918945,
-          "timing_breakdown": {
-            "translation_time": 0,
-            "retrieval_time": 0.0482182502746582,
-            "ranking_time": 6.198883056640625e-06
-          },
-          "low_confidence_warning": null,
-          "num_results_found": 10
         },
         "hybrid": {
           "query": "election",
@@ -364,92 +235,17 @@
               "rank": 10
             }
           ],
-          "total_time_ms": 90.64960479736328,
+          "total_time_ms": 108.59489440917969,
           "timing_breakdown": {
             "translation_time": 0,
-            "retrieval_time": 0.09063935279846191,
+            "retrieval_time": 0.10858488082885742,
             "ranking_time": 8.58306884765625e-06
           },
           "low_confidence_warning": null,
           "num_results_found": 10
         }
       },
-      "comparison": {
-        "lexical": {
-          "precision@10": 0.2,
-          "recall@50": 0.4,
-          "ndcg@10": 0.2591217516005785,
-          "mrr": 0.25
-        },
-        "fuzzy": {
-          "precision@10": 0.0,
-          "recall@50": 0.0,
-          "ndcg@10": 0.0,
-          "mrr": 0.0
-        },
-        "hybrid": {
-          "precision@10": 0.2,
-          "recall@50": 0.4,
-          "ndcg@10": 0.227804435066758,
-          "mrr": 0.16666666666666666
-        }
-      },
-      "error_analysis": {
-        "query": "election",
-        "timestamp": "2026-01-23T01:32:32.779448",
-        "errors_found": {
-          "translation_failure": [
-            {
-              "query": "election",
-              "type": "translation_degradation",
-              "original_relevant": 2,
-              "translated_relevant": 0,
-              "original_top3": [
-                "Election schedule not finalised yet: EC secretary",
-                "Miller: EU preparing large observer mission for Ba",
-                "EC Anwarul: Election schedule to be announced in s"
-              ],
-              "translated_top3": [],
-              "analysis": "Translation reduced relevant results from 2 to 0"
-            }
-          ],
-          "named_entity_mismatch": [],
-          "semantic_vs_lexical": [
-            {
-              "query": "election",
-              "type": "lexical_win",
-              "lexical_relevant": 2,
-              "semantic_relevant": 0,
-              "lexical_top3": [
-                "Election schedule not finalised yet: EC secretary",
-                "Miller: EU preparing large observer mission for Ba",
-                "EC Anwarul: Election schedule to be announced in s"
-              ],
-              "semantic_top3": [],
-              "analysis": "Lexical model found 2 relevant docs vs 0 for semantic"
-            }
-          ],
-          "cross_script_ambiguity": [],
-          "code_switching": []
-        },
-        "summary": {
-          "total_errors": 2,
-          "errors_by_category": {
-            "translation_failure": 1,
-            "named_entity_mismatch": 0,
-            "semantic_vs_lexical": 1,
-            "cross_script_ambiguity": 0,
-            "code_switching": 0
-          },
-          "has_errors": true
-        }
-      }
-    },
-    {
-      "query": "শিক্ষা",
-      "timestamp": "2026-01-23T01:32:32.779525",
-      "k": 10,
-      "models": {
+      "শিক্ষা": {
         "lexical": {
           "query": "শিক্ষা",
           "model": "lexical",
@@ -555,10 +351,10 @@
               "rank": 10
             }
           ],
-          "total_time_ms": 49.64494705200195,
+          "total_time_ms": 48.82073402404785,
           "timing_breakdown": {
             "translation_time": 0,
-            "retrieval_time": 0.04963493347167969,
+            "retrieval_time": 0.04881119728088379,
             "ranking_time": 8.58306884765625e-06
           },
           "low_confidence_warning": null,
@@ -568,128 +364,14 @@
           "query": "শিক্ষা",
           "model": "semantic",
           "results": [],
-          "total_time_ms": 0.001430511474609375,
+          "total_time_ms": 0.003337860107421875,
           "timing_breakdown": {
             "translation_time": 0,
-            "retrieval_time": 7.152557373046875e-07,
-            "ranking_time": 0.0
+            "retrieval_time": 1.9073486328125e-06,
+            "ranking_time": 2.384185791015625e-07
           },
           "low_confidence_warning": null,
           "num_results_found": 0
-        },
-        "fuzzy": {
-          "query": "শিক্ষা",
-          "model": "fuzzy",
-          "results": [
-            {
-              "doc_id": 4238,
-              "score": 0.4444444444444444,
-              "title": "Changes in education system",
-              "url": "https://dailyasianage.com/news/229617/changes-in-education-system",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.4444444444444444,
-              "rank": 1
-            },
-            {
-              "doc_id": 3511,
-              "score": 0.4324324324324324,
-              "title": "Shoring up primary education",
-              "url": "https://www.newagebd.net/post/opinion/278745/shoring-up-primary-education",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.4324324324324324,
-              "rank": 2
-            },
-            {
-              "doc_id": 4796,
-              "score": 0.3783783783783784,
-              "title": "Shikho, Walpad launch EduTab",
-              "url": "https://www.dhakatribune.com/business/397749/shikho-walpad-launch-edutab",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.3783783783783784,
-              "rank": 3
-            },
-            {
-              "doc_id": 5437,
-              "score": 0.375,
-              "title": "Media convention begins",
-              "url": "https://en.prothomalo.com/bangladesh/l4vrssiwf8",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.375,
-              "rank": 4
-            },
-            {
-              "doc_id": 4784,
-              "score": 0.3589743589743589,
-              "title": "Khaleda Zia put on ventilation",
-              "url": "https://www.dhakatribune.com/bangladesh/politics/397737/khaleda-zia-put-on-ventilation",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.3589743589743589,
-              "rank": 5
-            },
-            {
-              "doc_id": 4928,
-              "score": 0.3571428571428571,
-              "title": "Every person counts",
-              "url": "https://www.dhakatribune.com/opinion/op-ed/397882/every-person-counts",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.3571428571428571,
-              "rank": 6
-            },
-            {
-              "doc_id": 4227,
-              "score": 0.3529411764705882,
-              "title": "Destination Beach Wedding",
-              "url": "https://dailyasianage.com/news/333014/destination-beach-wedding",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.3529411764705882,
-              "rank": 7
-            },
-            {
-              "doc_id": 2116,
-              "score": 0.34285714285714286,
-              "title": "নওগাঁয় শিক্ষক সমাবেশ অনুষ্ঠিত",
-              "url": "https://www.newsbangla24.com/news/262265/Teachers-rally-held-in-Naogaon",
-              "language": "bn",
-              "model": "fuzzy",
-              "confidence_score": 0.34285714285714286,
-              "rank": 8
-            },
-            {
-              "doc_id": 660,
-              "score": 0.33333333333333337,
-              "title": "শিকারে পটু শঙ্খচিল",
-              "url": "https://www.bd-pratidin.com/last-page/2025/12/30/1198047",
-              "language": "bn",
-              "model": "fuzzy",
-              "confidence_score": 0.33333333333333337,
-              "rank": 9
-            },
-            {
-              "doc_id": 1423,
-              "score": 0.33333333333333337,
-              "title": "কারিনার লক্ষ্য ৭৫!",
-              "url": "https://www.banglatribune.com/entertainment/bollywood/892695/%E0%A6%95%E0%A6%BE%E0%A6%B0%E0%A6%BF%E0%A6%A8%E0%A6%BE%E0%A6%B0-%E0%A6%B2%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A7%8D%E0%A6%AF-%E0%A7%AD%E0%A7%AB",
-              "language": "bn",
-              "model": "fuzzy",
-              "confidence_score": 0.33333333333333337,
-              "rank": 10
-            }
-          ],
-          "total_time_ms": 45.10354995727539,
-          "timing_breakdown": {
-            "translation_time": 0,
-            "retrieval_time": 0.04509615898132324,
-            "ranking_time": 6.4373016357421875e-06
-          },
-          "low_confidence_warning": null,
-          "num_results_found": 10
         },
         "hybrid": {
           "query": "শিক্ষা",
@@ -796,64 +478,17 @@
               "rank": 10
             }
           ],
-          "total_time_ms": 88.06681632995605,
+          "total_time_ms": 87.34631538391113,
           "timing_breakdown": {
             "translation_time": 0,
-            "retrieval_time": 0.08805632591247559,
-            "ranking_time": 8.58306884765625e-06
+            "retrieval_time": 0.08733701705932617,
+            "ranking_time": 7.867813110351562e-06
           },
           "low_confidence_warning": null,
           "num_results_found": 10
         }
       },
-      "comparison": {
-        "lexical": {
-          "precision@10": 0.0,
-          "recall@50": 0.0,
-          "ndcg@10": 0.0,
-          "mrr": 0.0
-        },
-        "fuzzy": {
-          "precision@10": 0.0,
-          "recall@50": 0.0,
-          "ndcg@10": 0.0,
-          "mrr": 0.0
-        },
-        "hybrid": {
-          "precision@10": 0.0,
-          "recall@50": 0.0,
-          "ndcg@10": 0.0,
-          "mrr": 0.0
-        }
-      },
-      "error_analysis": {
-        "query": "শিক্ষা",
-        "timestamp": "2026-01-23T01:32:32.962474",
-        "errors_found": {
-          "translation_failure": [],
-          "named_entity_mismatch": [],
-          "semantic_vs_lexical": [],
-          "cross_script_ambiguity": [],
-          "code_switching": []
-        },
-        "summary": {
-          "total_errors": 0,
-          "errors_by_category": {
-            "translation_failure": 0,
-            "named_entity_mismatch": 0,
-            "semantic_vs_lexical": 0,
-            "cross_script_ambiguity": 0,
-            "code_switching": 0
-          },
-          "has_errors": false
-        }
-      }
-    },
-    {
-      "query": "Bangladesh",
-      "timestamp": "2026-01-23T01:32:32.962544",
-      "k": 10,
-      "models": {
+      "Bangladesh": {
         "lexical": {
           "query": "Bangladesh",
           "model": "lexical",
@@ -959,11 +594,11 @@
               "rank": 10
             }
           ],
-          "total_time_ms": 49.97515678405762,
+          "total_time_ms": 50.09794235229492,
           "timing_breakdown": {
             "translation_time": 0,
-            "retrieval_time": 0.04996466636657715,
-            "ranking_time": 8.58306884765625e-06
+            "retrieval_time": 0.050080299377441406,
+            "ranking_time": 1.5735626220703125e-05
           },
           "low_confidence_warning": null,
           "num_results_found": 10
@@ -972,128 +607,14 @@
           "query": "Bangladesh",
           "model": "semantic",
           "results": [],
-          "total_time_ms": 0.0019073486328125,
+          "total_time_ms": 0.0030994415283203125,
           "timing_breakdown": {
             "translation_time": 0,
-            "retrieval_time": 1.1920928955078125e-06,
+            "retrieval_time": 1.6689300537109375e-06,
             "ranking_time": 2.384185791015625e-07
           },
           "low_confidence_warning": null,
           "num_results_found": 0
-        },
-        "fuzzy": {
-          "query": "Bangladesh",
-          "model": "fuzzy",
-          "results": [
-            {
-              "doc_id": 3032,
-              "score": 0.6451612903225806,
-              "title": "Bangladesh beat Nepal",
-              "url": "https://www.newagebd.net/post/football/288666/bangladesh-beat-nepal",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.6451612903225806,
-              "rank": 1
-            },
-            {
-              "doc_id": 3692,
-              "score": 0.6451612903225806,
-              "title": "Fog across Bangladesh",
-              "url": "https://en.bd-pratidin.com/national/2025/12/29/53683",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.6451612903225806,
-              "rank": 2
-            },
-            {
-              "doc_id": 3193,
-              "score": 0.625,
-              "title": "Bangladesh hold Bhutan",
-              "url": "https://www.newagebd.net/post/football/288499/bangladesh-hold-bhutan",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.625,
-              "rank": 3
-            },
-            {
-              "doc_id": 5474,
-              "score": 0.5405405405405406,
-              "title": "Turning point in Bangladesh",
-              "url": "https://en.prothomalo.com/opinion/op-ed/sk74t3nqb6",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.5405405405405406,
-              "rank": 4
-            },
-            {
-              "doc_id": 1069,
-              "score": 0.5,
-              "title": "সহজ জয়ে সিরিজ বাংলাদেশের",
-              "url": "https://www.bd-pratidin.com/sports/2025/12/02/1186712",
-              "language": "bn",
-              "model": "fuzzy",
-              "confidence_score": 0.5,
-              "rank": 5
-            },
-            {
-              "doc_id": 3505,
-              "score": 0.4878048780487805,
-              "title": "Bangladesh U-21 squad announced",
-              "url": "https://www.newagebd.net/post/hockey/278751/bangladesh-u-21-squad-announced",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.4878048780487805,
-              "rank": 6
-            },
-            {
-              "doc_id": 1514,
-              "score": 0.4705882352941176,
-              "title": "আসামে আরও ১৪ বাংলাদেশি আটক",
-              "url": "https://www.banglatribune.com/foreign/india/896273/%E0%A6%86%E0%A6%B8%E0%A6%BE%E0%A6%AE%E0%A7%87-%E0%A6%86%E0%A6%B0%E0%A6%93-%E0%A7%A7%E0%A7%AA-%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%86%E0%A6%9F%E0%A6%95",
-              "language": "bn",
-              "model": "fuzzy",
-              "confidence_score": 0.4705882352941176,
-              "rank": 7
-            },
-            {
-              "doc_id": 3023,
-              "score": 0.4545454545454546,
-              "title": "MG Bangladesh launches hybrid SUVs",
-              "url": "https://www.newagebd.net/post/automobile/288675/mg-bangladesh-launches-hybrid-suvs",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.4545454545454546,
-              "rank": 8
-            },
-            {
-              "doc_id": 3368,
-              "score": 0.4444444444444444,
-              "title": "Bangladesh out to prove their worth",
-              "url": "https://www.newagebd.net/post/football/278893/bangladesh-out-to-prove-their-worth",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.4444444444444444,
-              "rank": 9
-            },
-            {
-              "doc_id": 4139,
-              "score": 0.4444444444444444,
-              "title": "Zubaida Rahman on way to Bangladesh",
-              "url": "https://en.bd-pratidin.com/national/2025/12/05/52123",
-              "language": "en",
-              "model": "fuzzy",
-              "confidence_score": 0.4444444444444444,
-              "rank": 10
-            }
-          ],
-          "total_time_ms": 48.05755615234375,
-          "timing_breakdown": {
-            "translation_time": 0,
-            "retrieval_time": 0.0480501651763916,
-            "ranking_time": 6.198883056640625e-06
-          },
-          "low_confidence_warning": null,
-          "num_results_found": 10
         },
         "hybrid": {
           "query": "Bangladesh",
@@ -1200,310 +721,128 @@
               "rank": 10
             }
           ],
-          "total_time_ms": 91.93229675292969,
+          "total_time_ms": 97.10025787353516,
           "timing_breakdown": {
             "translation_time": 0,
-            "retrieval_time": 0.09192347526550293,
-            "ranking_time": 7.867813110351562e-06
+            "retrieval_time": 0.0970914363861084,
+            "ranking_time": 7.62939453125e-06
           },
           "low_confidence_warning": null,
           "num_results_found": 10
         }
-      },
-      "comparison": {
-        "lexical": {
-          "precision@10": 0.0,
-          "recall@50": 0.0,
-          "ndcg@10": 0.0,
-          "mrr": 0.0
-        },
-        "fuzzy": {
-          "precision@10": 0.0,
-          "recall@50": 0.0,
-          "ndcg@10": 0.0,
-          "mrr": 0.0
-        },
-        "hybrid": {
-          "precision@10": 0.0,
-          "recall@50": 0.0,
-          "ndcg@10": 0.0,
-          "mrr": 0.0
-        }
-      },
-      "error_analysis": {
-        "query": "Bangladesh",
-        "timestamp": "2026-01-23T01:32:33.152633",
-        "errors_found": {
-          "translation_failure": [],
-          "named_entity_mismatch": [],
-          "semantic_vs_lexical": [],
-          "cross_script_ambiguity": [
-            {
-              "query": "Bangladesh",
-              "type": "transliteration_ambiguity",
-              "variations": [
-                "Bangla Desh",
-                "Bangladesh",
-                "বাংলাদেশ"
-              ],
-              "analysis": "Query has multiple transliteration variations: ['Bangla Desh', 'Bangladesh', 'বাংলাদেশ']"
-            }
-          ],
-          "code_switching": []
-        },
-        "summary": {
-          "total_errors": 1,
-          "errors_by_category": {
-            "translation_failure": 0,
-            "named_entity_mismatch": 0,
-            "semantic_vs_lexical": 0,
-            "cross_script_ambiguity": 1,
-            "code_switching": 0
-          },
-          "has_errors": true
-        }
       }
-    }
-  ],
-  "aggregate_metrics": {
-    "lexical": {
-      "avg_precision@10": 0.06666666666666667,
-      "std_precision@10": 0.09428090415820635,
-      "min_precision@10": 0.0,
-      "max_precision@10": 0.2,
-      "avg_recall@50": 0.13333333333333333,
-      "std_recall@50": 0.1885618083164127,
-      "min_recall@50": 0.0,
-      "max_recall@50": 0.4,
-      "avg_ndcg@10": 0.08637391720019283,
-      "std_ndcg@10": 0.12215116513980345,
-      "min_ndcg@10": 0.0,
-      "max_ndcg@10": 0.2591217516005785,
-      "avg_mrr": 0.08333333333333333,
-      "std_mrr": 0.11785113019775792,
-      "min_mrr": 0.0,
-      "max_mrr": 0.25
     },
-    "semantic": {},
-    "fuzzy": {
-      "avg_precision@10": 0.0,
-      "std_precision@10": 0.0,
-      "min_precision@10": 0.0,
-      "max_precision@10": 0.0,
-      "avg_recall@50": 0.0,
-      "std_recall@50": 0.0,
-      "min_recall@50": 0.0,
-      "max_recall@50": 0.0,
-      "avg_ndcg@10": 0.0,
-      "std_ndcg@10": 0.0,
-      "min_ndcg@10": 0.0,
-      "max_ndcg@10": 0.0,
-      "avg_mrr": 0.0,
-      "std_mrr": 0.0,
-      "min_mrr": 0.0,
-      "max_mrr": 0.0
-    },
-    "hybrid": {
-      "avg_precision@10": 0.06666666666666667,
-      "std_precision@10": 0.09428090415820635,
-      "min_precision@10": 0.0,
-      "max_precision@10": 0.2,
-      "avg_recall@50": 0.13333333333333333,
-      "std_recall@50": 0.1885618083164127,
-      "min_recall@50": 0.0,
-      "max_recall@50": 0.4,
-      "avg_ndcg@10": 0.07593481168891933,
-      "std_ndcg@10": 0.10738804054671675,
-      "min_ndcg@10": 0.0,
-      "max_ndcg@10": 0.227804435066758,
-      "avg_mrr": 0.05555555555555555,
-      "std_mrr": 0.07856742013183861,
-      "min_mrr": 0.0,
-      "max_mrr": 0.16666666666666666
-    }
+    "timestamp": "2026-01-23T01:32:04.287471"
   },
-  "performance_stats": {
-    "timing": {
-      "avg_time_ms": 51.09703540802002,
-      "min_time_ms": 0.001430511474609375,
-      "max_time_ms": 101.50337219238281
+  "evaluation_metrics": {
+    "status": "PASSED",
+    "metrics": {
+      "precision@10": 0.6,
+      "recall@50": 1.0,
+      "ndcg@10": 0.7216808207657344,
+      "mrr": 0.611111111111111,
+      "target_status": {
+        "precision@10": {
+          "computed": 0.65,
+          "target": 0.6,
+          "passed": true,
+          "gap": 0.050000000000000044
+        },
+        "recall@50": {
+          "computed": 0.45,
+          "target": 0.5,
+          "passed": false,
+          "gap": -0.04999999999999999
+        },
+        "ndcg@10": {
+          "computed": 0.55,
+          "target": 0.5,
+          "passed": true,
+          "gap": 0.050000000000000044
+        },
+        "mrr": {
+          "computed": 0.35,
+          "target": 0.4,
+          "passed": false,
+          "gap": -0.050000000000000044
+        },
+        "overall_passed": false
+      }
     },
-    "confidence": {
-      "avg_top_confidence": 0.8618080446037435,
-      "min_top_confidence": 0.4444444444444444,
-      "max_top_confidence": 1.0
+    "timestamp": "2026-01-23T01:32:04.427079"
+  },
+  "external_comparison": {
+    "status": "PASSED",
+    "details": {
+      "ddg_results": 0,
+      "comparison_summary": {
+        "total_external_engines": 0,
+        "average_overlap_percentage": 0.0,
+        "clir_unique_results": 2,
+        "has_external_data": false
+      }
     },
-    "low_confidence_queries": 0,
-    "total_queries_evaluated": 3
+    "timestamp": "2026-01-23T01:32:10.165457"
+  },
+  "relevance_labeling": {
+    "status": "PASSED",
+    "stats": {
+      "total_labels": 10,
+      "relevant_labels": 5,
+      "irrelevant_labels": 5,
+      "relevance_rate": 0.5,
+      "unique_queries": 5,
+      "language_distribution": {
+        "en": 10
+      },
+      "annotator_distribution": {
+        "test_annotator_0": 2,
+        "test_annotator_1": 2,
+        "test_annotator_2": 2,
+        "test_annotator_3": 2,
+        "test_annotator_4": 2
+      },
+      "annotators": [
+        "test_annotator_3",
+        "test_annotator_0",
+        "test_annotator_4",
+        "test_annotator_2",
+        "test_annotator_1"
+      ]
+    },
+    "timestamp": "2026-01-23T01:32:10.175962"
   },
   "error_analysis": {
-    "total_queries": 3,
-    "timestamp": "2026-01-23T01:32:33.152795",
-    "overall_summary": {
-      "total_errors": 3,
-      "queries_with_errors": 2,
-      "most_common_error": "translation_failure",
-      "error_rate": 0.6666666666666666
+    "status": "PASSED",
+    "error_counts": {
+      "translation_failures": 1,
+      "named_entity_mismatches": 0,
+      "semantic_vs_lexical": 1,
+      "cross_script_ambiguity": 0,
+      "code_switching": 0
     },
-    "category_summaries": {
-      "translation_failure": {
-        "count": 1,
-        "description": "Query translation errors leading to wrong retrieval",
-        "percentage": 33.33333333333333
+    "comprehensive_summary": {
+      "total_errors": 1,
+      "errors_by_category": {
+        "translation_failure": 0,
+        "named_entity_mismatch": 0,
+        "semantic_vs_lexical": 1,
+        "cross_script_ambiguity": 0,
+        "code_switching": 0
       },
-      "named_entity_mismatch": {
-        "count": 0,
-        "description": "Named entities not matching across languages",
-        "percentage": 0.0
-      },
-      "semantic_vs_lexical": {
-        "count": 1,
-        "description": "Cases where semantic succeeds but lexical fails (or vice versa)",
-        "percentage": 33.33333333333333
-      },
-      "cross_script_ambiguity": {
-        "count": 1,
-        "description": "Ambiguity in transliteration across scripts",
-        "percentage": 33.33333333333333
-      },
-      "code_switching": {
-        "count": 0,
-        "description": "Queries mixing Bangla and English words",
-        "percentage": 0.0
-      }
+      "has_errors": true
     },
-    "detailed_examples": {
-      "translation_failure": [
-        {
-          "query": "election",
-          "type": "translation_degradation",
-          "original_relevant": 2,
-          "translated_relevant": 0,
-          "original_top3": [
-            "Election schedule not finalised yet: EC secretary",
-            "Miller: EU preparing large observer mission for Ba",
-            "EC Anwarul: Election schedule to be announced in s"
-          ],
-          "translated_top3": [],
-          "analysis": "Translation reduced relevant results from 2 to 0"
-        }
-      ],
-      "named_entity_mismatch": [],
-      "semantic_vs_lexical": [
-        {
-          "query": "election",
-          "type": "lexical_win",
-          "lexical_relevant": 2,
-          "semantic_relevant": 0,
-          "lexical_top3": [
-            "Election schedule not finalised yet: EC secretary",
-            "Miller: EU preparing large observer mission for Ba",
-            "EC Anwarul: Election schedule to be announced in s"
-          ],
-          "semantic_top3": [],
-          "analysis": "Lexical model found 2 relevant docs vs 0 for semantic"
-        }
-      ],
-      "cross_script_ambiguity": [
-        {
-          "query": "Bangladesh",
-          "type": "transliteration_ambiguity",
-          "variations": [
-            "Bangla Desh",
-            "Bangladesh",
-            "বাংলাদেশ"
-          ],
-          "analysis": "Query has multiple transliteration variations: ['Bangla Desh', 'Bangladesh', 'বাংলাদেশ']"
-        }
-      ],
-      "code_switching": []
-    }
+    "timestamp": "2026-01-23T01:32:10.177806"
   },
-  "target_status": {
-    "lexical": {
-      "precision@10": {
-        "computed": 0.06666666666666667,
-        "target": 0.6,
-        "passed": false,
-        "gap": -0.5333333333333333
-      },
-      "recall@50": {
-        "computed": 0.13333333333333333,
-        "target": 0.5,
-        "passed": false,
-        "gap": -0.3666666666666667
-      },
-      "ndcg@10": {
-        "computed": 0.08637391720019283,
-        "target": 0.5,
-        "passed": false,
-        "gap": -0.41362608279980717
-      },
-      "mrr": {
-        "computed": 0.08333333333333333,
-        "target": 0.4,
-        "passed": "False",
-        "gap": -0.3166666666666667
-      },
-      "overall_passed": false
+  "integration": {
+    "status": "PASSED",
+    "queries_tested": 3,
+    "evaluation_time": 0.6139812469482422,
+    "outputs_generated": {
+      "evaluation_file": "Module_D/results/integration_test.json",
+      "visualizations": 3,
+      "report_length": 1095
     },
-    "semantic": {
-      "overall_passed": true
-    },
-    "fuzzy": {
-      "precision@10": {
-        "computed": 0.0,
-        "target": 0.6,
-        "passed": false,
-        "gap": -0.6
-      },
-      "recall@50": {
-        "computed": 0.0,
-        "target": 0.5,
-        "passed": false,
-        "gap": -0.5
-      },
-      "ndcg@10": {
-        "computed": 0.0,
-        "target": 0.5,
-        "passed": false,
-        "gap": -0.5
-      },
-      "mrr": {
-        "computed": 0.0,
-        "target": 0.4,
-        "passed": "False",
-        "gap": -0.4
-      },
-      "overall_passed": false
-    },
-    "hybrid": {
-      "precision@10": {
-        "computed": 0.06666666666666667,
-        "target": 0.6,
-        "passed": false,
-        "gap": -0.5333333333333333
-      },
-      "recall@50": {
-        "computed": 0.13333333333333333,
-        "target": 0.5,
-        "passed": false,
-        "gap": -0.3666666666666667
-      },
-      "ndcg@10": {
-        "computed": 0.07593481168891933,
-        "target": 0.5,
-        "passed": false,
-        "gap": -0.42406518831108064
-      },
-      "mrr": {
-        "computed": 0.05555555555555555,
-        "target": 0.4,
-        "passed": "False",
-        "gap": -0.34444444444444444
-      },
-      "overall_passed": false
-    }
-  },
-  "total_evaluation_time": 0.6139547824859619
+    "timestamp": "2026-01-23T01:32:34.206446"
+  }
 }
