@@ -152,7 +152,58 @@ class CLIRRetriever:
                 'title': meta['title'],
                 'url': meta['url'],
                 'language': meta['language'],
-                'model': 'lexical'
+                'model': 'lexical_bm25'
+            })
+            
+        return results
+
+    def search_tfidf(self, query: str, k: int = 10) -> List[Dict]:
+        """
+        Perform Lexical Retrieval using standard TF-IDF.
+        Score = TF * IDF
+        """
+        # Process query
+        processed = self.query_processor.process(query, expand=True, map_nes=True)
+        search_terms = set()
+        for lang, target_q in processed['target_queries'].items():
+            tokens = self.indexer.tokenize(target_q, lang, remove_stopwords=True)
+            search_terms.update(tokens)
+        search_terms.update(processed['expanded_terms'])
+        
+        N = self.indexer.total_documents
+        scores = defaultdict(float)
+        
+        for term in search_terms:
+            if term not in self.indexer.inverted_index:
+                continue
+            
+            doc_posting = self.indexer.inverted_index[term]
+            df = len(doc_posting)
+            # Standard IDF: log(N / df)
+            idf = math.log(N / (df + 1)) + 1 
+            
+            for doc_id, positions in doc_posting.items():
+                # TF: Term Frequency (Raw count)
+                tf = len(positions)
+                
+                # We can normalize TF (e.g., log normalization) if we want, 
+                # but standard TF-IDF often uses raw or log(1+tf)
+                tf_norm = math.log(1 + tf)
+                
+                scores[doc_id] += tf_norm * idf
+                
+        sorted_docs = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:k]
+        
+        results = []
+        for doc_id, score in sorted_docs:
+            meta = self.indexer.document_metadata[doc_id]
+            results.append({
+                'doc_id': doc_id,
+                'score': score,
+                'title': meta['title'],
+                'url': meta['url'],
+                'language': meta['language'],
+                'model': 'lexical_tfidf'
             })
             
         return results
@@ -275,27 +326,62 @@ class CLIRRetriever:
 
     def search_fuzzy(self, query: str, k: int = 10) -> List[Dict]:
         """
-        Fuzzy matching on Titles. Useful for specific entities or misspellings.
-        Uses RapidFuzz or FuzzyWuzzy if available, else simple partial match.
+        Fuzzy matching on Titles coverage.
+        Includes transliteration/translation matching by using Module B's translation.
+        Matches 'Bangladesh' with 'বাংলাদেশ' via translation layer.
         """
         try:
             from rapidfuzz import process, fuzz
-            # Extract all titles
+            
+            # 1. Process query to get translations (e.g., 'Bangladesh' -> 'বাংলাদেশ')
+            #    We use the query processor to get the target query in the other language.
+            processed = self.query_processor.process(query, expand=False, map_nes=False)
+            
+            # Collect all query variants (original + translated)
+            query_variants = set()
+            query_variants.add(query)
+            for lang, q_trans in processed.get('target_queries', {}).items():
+                query_variants.add(q_trans)
+            
+            # remove empty strings
+            query_variants = {q for q in query_variants if q and q.strip()}
+            
+            all_matches = []
+            
+            # Extract all titles once
             titles = {doc_id: m['title'] for doc_id, m in self.indexer.document_metadata.items()}
             
-            # Find best matches
-            # process.extract returns list of (choice, score, key)
-            matches = process.extract(query, titles, scorer=fuzz.token_sort_ratio, limit=k)
+            # 2. Run Fuzzy Match for EACH variant
+            for q_var in query_variants:
+                # Limit result per variant
+                # process.extract returns list of (title, score, doc_id) in newer versions 
+                # or (title, score, key) depending on version. We assume dict-based extract.
+                matches = process.extract(q_var, titles, scorer=fuzz.token_sort_ratio, limit=k)
+                for match in matches:
+                    # Unpack carefully as rapidfuzz API varies slightly by version
+                    # Usually: (match_string, score, key)
+                    if len(match) == 3:
+                        title, score, doc_id = match
+                    else:
+                        continue # Skip unexpected format
+                        
+                    norm_score = score / 100.0
+                    all_matches.append((doc_id, norm_score))
+            
+            # 3. Deduplicate and Sort
+            # If a doc is found by multiple variants, take max score
+            unique_scores = defaultdict(float)
+            for doc_id, score in all_matches:
+                unique_scores[doc_id] = max(unique_scores[doc_id], score)
+                
+            sorted_docs = sorted(unique_scores.items(), key=lambda x: x[1], reverse=True)[:k]
             
             results = []
-            for title, score, doc_id in matches:
-                # Normalize score to 0-1
-                norm_score = score / 100.0
-                
+            for doc_id, score in sorted_docs:
                 meta = self.indexer.document_metadata[doc_id]
                 results.append({
                     'doc_id': doc_id,
-                    'score': norm_score,
+                    'score': score,
                     'title': meta['title'],
                     'url': meta['url'],
                     'language': meta['language'],
@@ -306,6 +392,7 @@ class CLIRRetriever:
         except ImportError:
             # Fallback: Simple substring search
             print("⚠ rapidfuzz not installed. Using simple substring match.")
+            # ... existing fallback ...
             results = []
             q_lower = query.lower()
             for doc_id, meta in self.indexer.document_metadata.items():

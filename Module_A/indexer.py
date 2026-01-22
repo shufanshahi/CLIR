@@ -459,9 +459,6 @@ def main():
         ("Module_A/English_DB/DhakaTribune/articles.json", "DhakaTribune (English)"),
         ("Module_A/English_DB/ProthomAlo/articles.json", "ProthomAlo (English)")
         
-        
-        
-        
     ]
     
     total_articles = 0
