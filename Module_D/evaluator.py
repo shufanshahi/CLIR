@@ -328,102 +328,106 @@ class CLIREvaluator:
             return ""
     
     def generate_visualizations(self, evaluation: Dict[str, Any]) -> List[str]:
-        """Generate visualization plots for evaluation results."""
+        """Generate visualization plots for evaluation results based on IR metrics."""
         plot_files = []
         
         try:
             # Set up plotting style
             plt.style.use('default')
-            sns.set_palette("husl")
+            sns.set_context("notebook", font_scale=1.1)
+            sns.set_style("whitegrid")
             
-            # 1. Metrics comparison bar chart
-            if 'aggregate_metrics' in evaluation:
-                metrics_data = []
-                models = list(evaluation['aggregate_metrics'].keys())
-                
-                for model in models:
-                    for metric in ['precision@10', 'recall@50', 'ndcg@10', 'mrr']:
-                        avg_key = f'avg_{metric}'
-                        if avg_key in evaluation['aggregate_metrics'][model]:
-                            metrics_data.append({
-                                'Model': model.title(),
-                                'Metric': metric.replace('@', '@'),
-                                'Score': evaluation['aggregate_metrics'][model][avg_key]
-                            })
-                
-                if metrics_data:
-                    df_metrics = pd.DataFrame(metrics_data)
-                    
-                    fig, ax = plt.subplots(figsize=(12, 6))
-                    sns.barplot(data=df_metrics, x='Metric', y='Score', hue='Model', ax=ax)
-                    ax.set_title('Model Performance Comparison')
-                    ax.set_ylim(0, 1)
-                    plt.xticks(rotation=45)
-                    plt.tight_layout()
-                    
-                    plot_file = os.path.join(self.output_dir, 'metrics_comparison.png')
-                    plt.savefig(plot_file, dpi=300, bbox_inches='tight')
-                    plt.close()
-                    plot_files.append(plot_file)
+            if 'aggregate_metrics' not in evaluation:
+                return []
+
+            models = list(evaluation['aggregate_metrics'].keys())
+            # Define metrics and their targets based on Module D requirements
+            metrics_config = {
+                'precision@10': {'target': 0.6, 'title': 'Precision@10 (Target ≥ 0.6)'},
+                'recall@50': {'target': 0.5, 'title': 'Recall@50 (Target ≥ 0.5)'},
+                'ndcg@10': {'target': 0.5, 'title': 'nDCG@10 (Target ≥ 0.5)'},
+                'mrr': {'target': 0.4, 'title': 'Mean Reciprocal Rank (Target ≥ 0.4)'}
+            }
+
+            # Prepare data frame for plotting
+            data = []
+            for model in models:
+                vals = evaluation['aggregate_metrics'][model]
+                for metric_key, config in metrics_config.items():
+                    avg_key = f'avg_{metric_key}'
+                    if avg_key in vals:
+                        data.append({
+                            'Model': model,
+                            'Metric': metric_key,
+                            'Score': vals[avg_key],
+                            'Target': config['target']
+                        })
             
-            # 2. Performance timing chart
-            if 'performance_stats' in evaluation and 'timing' in evaluation['performance_stats']:
-                timing_data = evaluation['performance_stats']['timing']
+            if not data:
+                return []
                 
-                fig, ax = plt.subplots(figsize=(8, 5))
-                timing_labels = ['Average', 'Minimum', 'Maximum']
-                timing_values = [timing_data['avg_time_ms'], timing_data['min_time_ms'], timing_data['max_time_ms']]
+            df = pd.DataFrame(data)
+
+            # 1. Individual Metric Charts with Target Lines
+            for metric_key, config in metrics_config.items():
+                subset = df[df['Metric'] == metric_key]
+                if subset.empty:
+                    continue
                 
-                bars = ax.bar(timing_labels, timing_values, color=['skyblue', 'lightgreen', 'salmon'])
-                ax.set_ylabel('Time (milliseconds)')
-                ax.set_title('Query Processing Time Distribution')
+                plt.figure(figsize=(10, 6))
+                # Bar plot for scores
+                ax = sns.barplot(x='Model', y='Score', data=subset, palette='viridis', hue='Model', legend=False)
                 
-                # Add value labels on bars
-                for bar, value in zip(bars, timing_values):
-                    ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.1,
-                           f'{value:.1f}ms', ha='center', va='bottom')
+                # Add target line
+                plt.axhline(y=config['target'], color='r', linestyle='--', linewidth=2, label=f"Target ({config['target']})")
                 
+                # Add score labels on top of bars
+                for p in ax.patches:
+                    height = p.get_height()
+                    if height > 0:
+                        ax.annotate(f'{height:.3f}', 
+                                (p.get_x() + p.get_width() / 2., height), 
+                                ha = 'center', va = 'center', 
+                                xytext = (0, 9), 
+                                textcoords = 'offset points',
+                                fontweight='bold')
+                
+                plt.title(config['title'], fontsize=14, pad=20)
+                plt.xlabel('Retrieval Model', fontsize=12)
+                plt.ylabel('Score', fontsize=12)
+                plt.ylim(0, 1.1) # IR metrics are usually 0-1
+                plt.legend(loc='upper right')
                 plt.tight_layout()
                 
-                plot_file = os.path.join(self.output_dir, 'timing_distribution.png')
-                plt.savefig(plot_file, dpi=300, bbox_inches='tight')
+                # Save plot
+                filename = f"{metric_key.split('@')[0]}_comparison.png"
+                filepath = os.path.join(self.output_dir, filename)
+                plt.savefig(filepath, dpi=300)
                 plt.close()
-                plot_files.append(plot_file)
+                plot_files.append(filepath)
+
+            # 2. Combined Summary Chart (Grouped Bar Chart)
+            plt.figure(figsize=(14, 8))
+            ax = sns.barplot(x='Metric', y='Score', hue='Model', data=df, palette='viridis')
             
-            # 3. Error analysis pie chart
-            if 'error_analysis' in evaluation and 'category_summaries' in evaluation['error_analysis']:
-                error_data = evaluation['error_analysis']['category_summaries']
-                
-                if error_data:
-                    categories = list(error_data.keys())
-                    counts = [error_data[cat]['count'] for cat in categories]
-                    
-                    # Filter out categories with zero errors
-                    filtered_data = [(cat, count) for cat, count in zip(categories, counts) if count > 0]
-                    
-                    if filtered_data:
-                        categories, counts = zip(*filtered_data)
-                        
-                        fig, ax = plt.subplots(figsize=(10, 6))
-                        wedges, texts, autotexts = ax.pie(counts, labels=categories, autopct='%1.1f%%', startangle=90)
-                        ax.set_title('Error Category Distribution')
-                        
-                        # Improve text readability
-                        for autotext in autotexts:
-                            autotext.set_color('white')
-                            autotext.set_weight('bold')
-                        
-                        plt.tight_layout()
-                        
-                        plot_file = os.path.join(self.output_dir, 'error_distribution.png')
-                        plt.savefig(plot_file, dpi=300, bbox_inches='tight')
-                        plt.close()
-                        plot_files.append(plot_file)
+            plt.title('Overall Retrieval Performance Comparison', fontsize=16, pad=20)
+            plt.xlabel('Metric', fontsize=12)
+            plt.ylabel('Score', fontsize=12)
+            plt.ylim(0, 1.1)
+            plt.legend(title='Model', bbox_to_anchor=(1.05, 1), loc='upper left')
+            plt.tight_layout()
             
-            print(f"Generated {len(plot_files)} visualization plots")
+            filepath = os.path.join(self.output_dir, 'overall_metrics_summary.png')
+            plt.savefig(filepath, dpi=300)
+            plt.close()
+            plot_files.append(filepath)
+
+            print(f"Generated {len(plot_files)} metric visualization plots based on Module D requirements")
             
         except Exception as e:
             self.logger.error(f"Error generating visualizations: {e}")
+            import traceback
+            traceback.print_exc()
         
         return plot_files
     
